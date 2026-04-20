@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thước phim - ĐẠT LA ĐÀ LẠT</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" />
+
+    <style>
+      body, html {
+        font-family: "Jost", sans-serif;
+        background-color: #161A27; 
+        margin: 0;
+        height: 100%;
+        overflow: hidden; 
+      }
+
+      /* Kỹ thuật Scroll Snap */
+      .tiktok-scroll-container {
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+        scroll-behavior: smooth;
+      }
+
+      .tiktok-video-wrapper {
+        height: 100vh;
+        scroll-snap-align: start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 60px; 
+        position: relative;
+      }
+
+      /* Tùy chỉnh nhẹ cho video và nội dung để hiển thị đẹp hơn */
+      .video-content-container {
+        width: 100%;
+        max-width: 1000px;
+        padding: 0 20px;
+      }
+
+      .local-video {
+        width: 100%;
+        max-height: 70vh;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        object-fit: cover;
+      }
+
+      /* Thanh menu cho trang tối */
+      .fixed-bottom-menu {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #13357b;
+        z-index: 1000;
+      }
+      .fixed-bottom-menu .tabs ul { border-bottom: none; }
+      .fixed-bottom-menu .tabs.is-boxed a {
+        border: none !important;
+        color: rgba(255, 255, 255, 0.5);
+        padding: 15px 10px;
+      }
+      .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+        background-color: transparent !important;
+        color: white !important;
+        border-top: 3px solid #14b8a6 !important;
+        font-weight: 600;
+      } 
+      .fixed-bottom-menu .tabs.is-boxed a:hover {
+        background-color: rgba(255, 255, 255, 0.1) !important; 
+        color: #ffffff !important; 
+        border: none !important; 
+      }
+
+      /* Nút tim */
+      .heart-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: transform 0.2s ease;
+      }
+      .heart-btn:hover {
+        transform: scale(1.1);
+      }
+      a { color: #adf4ec; }
+      /* Định vị logo ở góc trên bên trái */
+      .fixed-logo {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001; /* Phải lớn hơn z-index của video và menu để không bị che */
+      }
+
+      .fixed-logo img {
+        width: 100px; /* Bạn có thể chỉnh lại kích thước logo cho phù hợp */
+        height: auto;
+        filter: drop-shadow(0 2px 10px rgba(0,0,0,0.5)); /* Thêm bóng đổ để logo nổi bật trên nền video */
+        
+      }
+
+      
+
+      /* Trên điện thoại thì cho logo nhỏ lại một chút để không chiếm chỗ */
+      @media (max-width: 768px) {
+        .fixed-logo {
+          top: 15px;
+          left: 35px;
+        }
+        .fixed-logo img {
+          width: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="fixed-logo">
+  <a href="index.html">
+    <img src="images/comon/thuocphimlogo.webp" alt="Logo Đà Lạt">
+  </a>
+</div>
+    <div class="tiktok-scroll-container">
+      
+      <div class="tiktok-video-wrapper">
+        <div class="video-content-container">
+          <div class="columns is-vcentered is-centered">
+            
+            <div class="column is-7-desktop is-12-mobile has-text-centered">
+              <video class="local-video" src="videos/baolauchuadi.mp4" controls autoplay loop muted></video>
+            </div>
+
+            <div class="column is-5-desktop is-12-mobile px-5">
+              <h2 class="title is-3 has-text-white mb-2">Đà Lạt mộng mơ</h2>
+              <p class="subtitle is-6 has-text-grey-light mb-4">
+              </p>
+              <p class="has-text-white mb-5">
+Đã bao lâu bạn chưa đi Đà Lạt ? <a href="#">#dalat #ongboreviewdalat</a>   </p>
+
+              <button class="heart-btn" onclick="toggleHeart(this)">
+                <span class="icon is-large has-text-white">
+                  <i class="fa-regular fa-heart fa-2x"></i>
+                </span>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="tiktok-video-wrapper">
+        <div class="video-content-container">
+          <div class="columns is-vcentered is-centered">
+            <div class="column is-7-desktop is-12-mobile has-text-centered">
+              <video class="local-video" src="videos/MuaCon.mp4" controls loop muted></video>
+            </div>
+            <div class="column is-5-desktop is-12-mobile px-5">
+              <h2 class="title is-3 has-text-white mb-2">Đạt La Đà Lạt</h2>
+              
+              <p class="has-text-white mb-5">
+                Sư phạm múa cỡ này:) <a href="#">#xuhuong #vietphuc #tiktok #capcut</a>
+              </p>
+              <button class="heart-btn" onclick="toggleHeart(this)">
+                <span class="icon is-large has-text-white">
+                  <i class="fa-regular fa-heart fa-2x"></i>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="fixed-bottom-menu">
+      <nav class="tabs is-boxed is-fullwidth m-0">
+        <div class="container is-max-widescreen">
+          <ul>
+            <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+            <li class="is-active"><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+            <li><a href="discovery.html"><i class="fa-solid fa-compass mr-2"></i>Khám phá</a></li>
+            <li><a href="tour.html"><i class="fa-solid fa-location-arrow mr-2"></i>Tour</a></li>
+            <li><a href="gioiThieu.html"><i class="fa-brands fa-dochub mr-2"></i>Giới thiệu</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+        // JS xử lý thả tim đơn giản
+        function toggleHeart(button) {
+            // Tìm thẻ <i> bên trong nút vừa click
+            const icon = button.querySelector('i');
+            
+            // Nếu đang là tim rỗng (fa-regular)
+            if (icon.classList.contains('fa-regular')) {
+                icon.classList.remove('fa-regular'); // Xóa class tim rỗng
+                icon.classList.add('fa-solid', 'has-text-danger'); // Thêm class tim đặc và màu đỏ của Bulma
+            } else {
+                // Nếu đang là tim đặc đỏ thì chuyển về tim rỗng trắng
+                icon.classList.remove('fa-solid', 'has-text-danger');
+                icon.classList.add('fa-regular');
+            }
+        }
+
+        // JS cho Menu trên điện thoại (Mặc định của bạn)
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach( el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+  </body>
+</html>

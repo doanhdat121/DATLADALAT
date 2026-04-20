@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Món ngon từ rau sạch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            padding-bottom: 60px;
+            background-color: #f9fafa;
+        }
+
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Đổi ảnh nền sang chủ đề rau xanh mướt */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        .food-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .fixed-bottom-menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            z-index: 1000;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 15px 10px;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero is-medium hero-bg">
+        <div class="hero-body has-text-centered">
+            <p class="title has-text-white is-size-2">Nông Sản Xứ Lạnh</p>
+            <p class="subtitle has-text-light mt-3">Thanh lọc cơ thể với những món ăn bình dị, tốt cho sức khỏe</p>
+        </div>
+    </section>
+
+    <section class="section pt-5">
+        <div class="container is-max-widescreen">
+
+            <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="../index.html" class="has-text-grey">
+                            <span class="icon is-small"><i class="fas fa-home"></i></span>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../discovery.html" class="has-text-grey">Khám phá</a>
+                    </li>
+                    <li>
+                        <a href="../quanQuen.html" class="has-text-grey">Ăn uống</a>
+                    </li>
+                    <li class="is-active">
+                        <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">Món ngon từ Cải canh</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <h1 class="has-text-primary has-text-centered mb-4">Cải canh là cải gì? Những món ăn thanh đạm, đơn giản ngon cơm</h1>
+                
+                <div class="columns is-multiline mt-4">
+                    <div class="column is-12">
+                        <div class="box">
+                            <h2 class="has-text-info mt-0">1. Cải canh là gì?</h2>
+                            <p>
+                                Cải canh hay còn có nhiều tên gọi khác là cải bẹ xanh, cải xanh, cải đắng, cải cay... Chúng có pháp danh khoa học là <em>Brassica juncea (L.)</em>, thuộc họ cải. Cải canh có màu xanh, thường cao khoảng 15cm - 30cm, lá to rộng và dài. Loại cải này rất dễ trồng bằng phương pháp gieo cấy, có thể trồng quanh năm và cho thu hoạch chỉ từ 40 đến 45 ngày.
+                            </p>
+
+                            <h2 class="has-text-info">2. Công dụng tuyệt vời của cải canh</h2>
+                            <p>
+                                Cải canh là nguồn cung cấp dồi dào vitamin A, B6, C, K, sắt, kali, canxi, folate... Đặc biệt, loại cải này rất ít calo, giàu chất xơ giúp thanh lọc cơ thể tuyệt vời, hỗ trợ giảm cân hiệu quả.
+                            </p>
+                            <ul>
+                                <li><strong>Theo Y học hiện đại:</strong> Tăng cường chức năng não, cải thiện trí nhớ, tăng cường miễn dịch, giảm cholesterol bảo vệ tim mạch, ngăn ngừa ung thư và chống lão hóa.</li>
+                                <li><strong>Theo Đông y:</strong> Cải canh là "giới thái", vị cay ấm không độc. Có tác dụng thông lợi khoan khoái trong hông ngực, trừ ho dốc, an thận lợi đàm, kiện tỳ, khí huyết lưu thông.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+                <h2 class="has-text-primary has-text-centered mt-5 mb-5">Các Món Ngon & Mẹo Vặt Từ Cải Canh</h2>
+
+                <div class="columns is-multiline">
+
+                    <div class="column is-6">
+                        <div class="box h-100">
+                            <h3 class="has-text-info is-size-4 mb-2">🥗 Cải canh xào tỏi</h3>
+                            <p class="is-size-6 mb-3">Món xào xanh mướt, nhanh gọn, ăn kèm các món cá kho, cá chiên hay thịt rim đều rất hao cơm trong những ngày bận rộn.</p>
+                            <ul class="is-size-6">
+                                <li><strong>Nguyên liệu:</strong> 500g cải canh, 1/3 củ tỏi, muối, hạt nêm, dầu ăn.</li>
+                                <li><strong>Cách làm:</strong> Cắt khúc rau ngâm nước muối rồi rửa sạch. Phi thơm tỏi với dầu ăn, cho cải vào đảo nhanh tay. Nêm 1/3 thìa cà phê muối, 1 thìa cà phê hạt nêm. Xào chín tới là hoàn thành.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column is-6">
+                        <div class="box h-100">
+                            <h3 class="has-text-info is-size-4 mb-2">🍲 Cách nấu canh cải canh</h3>
+                            <p class="is-size-6 mb-3">Món canh thanh mát, ngọt nước kết hợp với thịt băm hoặc tôm tươi giúp mâm cơm thêm hài hòa cân bằng dinh dưỡng.</p>
+                            <ul class="is-size-6">
+                                <li><strong>Nguyên liệu:</strong> 1kg cải canh, 100g tôm/thịt băm, hành lá, tỏi, gừng thái sợi, gia vị.</li>
+                                <li><strong>Cách làm:</strong> Phi thơm tỏi và 1/2 phần gừng, xào săn tôm thịt rồi đổ nước vào đun sôi. Thả rau cải, cho nốt gừng sợi, nêm nếm gia vị vừa ăn rồi rắc hành lá.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column is-6">
+                        <div class="box h-100">
+                            <h3 class="has-text-info is-size-4 mb-2">🥢 Cải canh luộc</h3>
+                            <p class="is-size-6 mb-3">Món ăn dân dã, lạ miệng mang lại cảm giác thanh đạm. Chấm cùng trứng dầm nước tương thì ngon bất ngờ.</p>
+                            <ul class="is-size-6">
+                                <li><strong>Nguyên liệu:</strong> 1kg cải xanh, muối, hạt nêm.</li>
+                                <li><strong>Cách làm:</strong> Đun sôi nước với 1 thìa cà phê muối và 2 thìa cà phê hạt nêm. Thả rau vào luộc vừa chín tới thì vớt ra ngay để giữ độ giòn và màu xanh.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="column is-6">
+                        <div class="box h-100 has-background-success-light">
+                            <h3 class="has-text-success-dark is-size-4 mb-2">🌱 Mẹo: Trồng cải canh tại nhà</h3>
+                            <p class="is-size-6 mb-3">Đảm bảo độ tươi sạch, không thuốc bảo vệ thực vật chỉ với một chiếc thùng xốp.</p>
+                            <ul class="is-size-6">
+                                <li>Chuẩn bị thùng xốp đục lỗ, cho đất tơi xốp và phân hữu cơ.</li>
+                                <li>Gieo hạt trực tiếp, phủ lớp đất mỏng. Tưới nước 2 lần/ngày (sáng sớm và chiều tối).</li>
+                                <li>Sau 3-4 lá thì tỉa cây cách nhau 5cm. Bón phân sau 5-7 ngày. Chỉ 20 - 30 ngày là có thể thu hoạch ăn dần!</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="../discovery.html"><i class="fas fa-utensils mr-2"></i>Ăn uống</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - 15 Quán Chay Siêu Ngon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            padding-bottom: 60px; /* Chừa chỗ cho menu bottom */
+            background-color: #f9fafa; /* Nền xám nhạt để làm nổi bật các thẻ box */
+        }
+
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
+                url('https://images.unsplash.com/photo-1498837167922-41c54b310a12?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Định dạng cho ảnh trong các box */
+        .restaurant-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .fixed-bottom-menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            z-index: 1000;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 15px 10px;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero is-medium hero-bg">
+        <div class="hero-body has-text-centered">
+            <p class="title has-text-white is-size-2">Top 15 Quán Chay Đà Lạt</p>
+            <p class="subtitle has-text-light mt-3">Lưu ngay danh sách này để thanh lọc cơ thể giữa tiết trời se lạnh nhé!</p>
+        </div>
+    </section>
+
+    <section class="section pt-5">
+        <div class="container is-max-widescreen">
+            
+            <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="../index.html" class="has-text-grey">
+                            <span class="icon is-small"><i class="fas fa-home"></i></span>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../discovery.html" class="has-text-grey">Khám phá</a>
+                    </li>
+                    <li>
+                        <a href="../anuong.html" class="has-text-grey">Ăn uống</a>
+                    </li>
+                    <li class="is-active">
+                        <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">15 Quán chay siêu ngon</a> 
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="content has-text-centered mb-6">
+                <h1 class="has-text-primary">Mách bạn 15 quán chay Đà Lạt siêu ngon không nên bỏ lỡ</h1>
+                <p class="is-size-5 has-text-grey">
+                    Đà Lạt không chỉ nổi tiếng với lẩu bò hay bánh tráng nướng mà còn là "thiên đường" của ẩm thực chay. Cùng khám phá 15 tọa độ ăn chay vừa ngon, vừa rẻ lại có không gian cực an yên nhé!
+                </p>
+            </div>
+
+            <div class="columns is-multiline">
+
+                <div class="column is-6">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-4 mb-2">1. Nhà hàng chay Từ Hạnh</h3>
+                        <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?q=80&w=1000&auto=format&fit=crop" alt="Chay Từ Hạnh" class="restaurant-img">
+                        <p>Nổi tiếng với không gian mộc mạc, đậm chất thiền. Các món chay ở đây được chế biến từ rau củ quả sạch Đà Lạt, vị thanh đạm, ít dầu mỡ. Đặc biệt món lẩu nấm chay ở đây rất được lòng thực khách.</p>
+                        <hr class="my-3">
+                        <ul style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><i class="fas fa-map-marker-alt has-text-danger mr-2"></i><strong>Địa chỉ:</strong> 17 Hoàng Văn Thụ, Phường 5, Đà Lạt</li>
+                            <li><i class="fas fa-clock has-text-warning mr-2"></i><strong>Giờ mở cửa:</strong> 07:00 – 20:30</li>
+                            <li><i class="fas fa-tag has-text-success mr-2"></i><strong>Mức giá:</strong> 30.000đ - 150.000đ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column is-6">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-4 mb-2">2. Nhà hàng chay Hoa Sen</h3>
+                        <img src="https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?q=80&w=1000&auto=format&fit=crop" alt="Chay Hoa Sen" class="restaurant-img">
+                        <p>Một trong những nhà hàng chay có tiếng và lâu đời nhất ngay trung tâm. Thực đơn cực kỳ phong phú với các món cơm, bún, phở, mì và các loại cuốn. Không gian rộng rãi phù hợp đi theo gia đình.</p>
+                        <hr class="my-3">
+                        <ul style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><i class="fas fa-map-marker-alt has-text-danger mr-2"></i><strong>Địa chỉ:</strong> 62 Phan Đình Phùng, Phường 2, Đà Lạt</li>
+                            <li><i class="fas fa-clock has-text-warning mr-2"></i><strong>Giờ mở cửa:</strong> 06:00 – 22:00</li>
+                            <li><i class="fas fa-tag has-text-success mr-2"></i><strong>Mức giá:</strong> 40.000đ - 200.000đ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column is-6">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-4 mb-2">3. Quán lẩu chay Hằng Thiện</h3>
+                        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop" alt="Lẩu Chay Hằng Thiện" class="restaurant-img">
+                        <p>Nếu bạn là tín đồ của lẩu thì không thể bỏ qua địa chỉ này. Nước lẩu được hầm từ các loại củ quả mang lại vị ngọt thanh tự nhiên. Đồ nhúng đa dạng với nấm kim châm, đùi gà, bào ngư và rau xanh mướt.</p>
+                        <hr class="my-3">
+                        <ul style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><i class="fas fa-map-marker-alt has-text-danger mr-2"></i><strong>Địa chỉ:</strong> 265/4 Bùi Thị Xuân, Phường 8, Đà Lạt</li>
+                            <li><i class="fas fa-clock has-text-warning mr-2"></i><strong>Giờ mở cửa:</strong> 09:00 – 22:00</li>
+                            <li><i class="fas fa-tag has-text-success mr-2"></i><strong>Mức giá:</strong> 100.000đ - 200.000đ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column is-6">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-4 mb-2">4. Quán chay Thanh Đạm</h3>
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop" alt="Chay Thanh Đạm" class="restaurant-img">
+                        <p>Quán chay bình dân quen thuộc của người dân bản địa. Mặc dù không gian không quá sang trọng nhưng món ăn lại vô cùng chất lượng. Đặc biệt món bún bò Huế chay ở đây có hương vị đậm đà rất đáng thử.</p>
+                        <hr class="my-3">
+                        <ul style="list-style-type: none; margin: 0; padding: 0;">
+                            <li><i class="fas fa-map-marker-alt has-text-danger mr-2"></i><strong>Địa chỉ:</strong> 99C Nguyễn Văn Trỗi, Phường 2, Đà Lạt</li>
+                            <li><i class="fas fa-clock has-text-warning mr-2"></i><strong>Giờ mở cửa:</strong> 06:30 – 18:30</li>
+                            <li><i class="fas fa-tag has-text-success mr-2"></i><strong>Mức giá:</strong> 25.000đ - 50.000đ</li>
+                        </ul>
+                    </div>
+                </div>
+
+                </div>
+            
+            <div class="has-text-centered mt-5">
+                <a href="https://mia.vn/cam-nang-du-lich/an-chay-khi-den-da-lat-15-nha-hang-sieu-ngon-ban-khong-nen-bo-qua-3296" target="_blank">
+                    <button class="button is-link is-rounded px-6">Đọc thêm bài viết gốc</button>
+                </a>
+            </div>
+            
+            <div class="has-text-centered mt-6">
+                <a href="../comNuoc.html">
+                    <button class="button is-link is-rounded is-medium">
+                        <span class="icon"><i class="fas fa-arrow-left"></i></span>
+                        <span>Quay lại danh mục Ăn uống</span>
+                    </button>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="../discovery.html"><i class="fas fa-utensils mr-2"></i>Ăn uống</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+</body>
+</html>

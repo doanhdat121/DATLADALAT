@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Du lịch thành phố ngàn hoa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Chỗ hẹn hò</p>
+            <p class="subtitle">Nếu như bạn đang có dự định cùng một nửa của mình vi vu đến Đà Lạt thì đừng bỏ qua "top
+                của top đỉnh của chóp"</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="discovery.html"><i class="fas fa-coffee mr-2"></i>Khám phá</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+    <section class="section">
+        
+    <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+        <ul>
+            <li>
+                <a href="index.html" class="has-text-grey">
+                    <span class="icon is-small"><i class="fas fa-home"></i></span>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li>
+                <a href="discovery.html" class="has-text-grey">Khám phá</a>
+            </li>
+            <li class="is-active">
+                <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">Chỗ hẹn hò</a>
+            </li>
+        </ul>
+    </nav>
+        <h1 class="title">Đôi trẻ</h1>
+        <h2 class="subtitle">
+            Đà Lạt là điểm hẹn hò lý tưởng cho người trẻ với không khí lãng mạn, se lạnh, nổi bật là các quán cafe view
+            thung lũng, tiệm nướng ngắm hoàng hôn hoặc tham quan các khu du lịch.
+        </h2>
+
+        <section class="section">
+            <div class="container">
+
+                
+                <div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    
+                        <div class="column is-5">
+                            <figure class="image is-16by9">
+                                <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1722083514/arhhmdt0ebtchawxc6w0.webp"
+                                    alt="Quán cafe hẹn hò" style="border-radius: 8px; object-fit: cover;">
+                            </figure>
+                        </div>
+
+                        <div class="column">
+                            <a href="postHenHo/13QuaBar.html" class="title is-4 has-text-primary"
+                                style="text-decoration: none;">
+
+                                13 Quán Bar Ở Đà Lạt Cực Chill Được Giới Trẻ Yêu Thích
+                            </a>
+                        </div>
+
+                        <div class="column is-narrow has-text-right">
+                            <span class="icon is-large has-text-grey-light">
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </div>
+                   
+            </div>
+            <div class="columns is-vcentered"
+                style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                <div class="column is-5">
+                    <figure class="image is-16by9">
+                        <img src="https://static2.abay.vn/Images/2026/01/30/da-lat-valentine.jpg"
+                            alt="Cafe view thung lũng Đà Lạt" style="border-radius: 8px; object-fit: cover;">
+                    </figure>
+                </div>
+                <div class="column">
+                    <a href="postHenHo/DoiTre2.html" class="title is-4 has-text-primary" style="text-decoration: none;">
+                        Đà Lạt – điểm đến lí tưởng cho chuyến “hẹn hò” dịp Valentine
+                    </a>
+                    <p class="mt-3 has-text-grey">Cùng người thương nhâm nhi ly trà nóng, cuộn tròn trong chiếc chăn
+                       Đà Lạt được mệnh danh là “thành phố tình yêu” bởi vẻ đẹp lãng đãng, mộng mơ và yên bình. Có lẽ chính vì thế, nơi đây cũng luôn nằm trong tốp những điểm đến được các cặp đôi lựa chọn trong dịp lễ tình nhân 14/02.
+                       .</p>
+                </div>
+                <div class="column is-narrow has-text-right">
+                    <span class="icon is-large has-text-grey-light">
+                        <i class="fas fa-chevron-right"></i>
+                    </span>
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+        </section>
+       <h1 class="title mt-6">Uyên ương</h1>
+        <h2 class="subtitle">
+            “Đồi uyên ương” là địa điểm đang được giới trẻ truyền tai nhau khám phá khi đến Đà Lạt, đặc biệt, điểm đến này là nơi vô cùng lý tưởng cho các cặp đôi.
+        </h2>
+
+        <div class="columns is-centered mt-5">
+            <div class="column is-8">
+                <figure class="image is-16by9" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <iframe class="has-ratio" 
+                        src="https://www.youtube.com/embed/PLeb85EFMhc?si=TEp2bnLtgWvp6Mzv" 
+                        title="Video Đồi Uyên Ương Đà Lạt" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <p class="has-text-centered has-text-grey is-italic mt-3">
+                    
+ĐÀ LẠT VLOG (Ep3) | Bọn mình chụp ảnh cưới ở Đà Lạt | Kira & Ly Diaries
+                </p>
+            </div>
+        </div>
+        
+
+
+        
+        <div class="columns is-centered mt-5">
+            <div class="column is-8">
+                <figure class="image is-16by9" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <iframe class="has-ratio" 
+                        src="https://www.youtube.com/embed/E-cMdqI4ZTc?si=t3Sf0o2tEZd2UyR1" 
+                        title="Video Đồi Uyên Ương Đà Lạt" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <p class="has-text-centered has-text-grey is-italic mt-3">
+                    
+Nhạc đám cưới hay nhất mọi thời đại
+                </p>
+            </div>
+        </div>
+
+
+
+
+
+        
+        <div class="columns is-centered mt-5">
+            <div class="column is-8">
+                <figure class="image is-16by9" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <iframe class="has-ratio" 
+                        src="https://www.youtube.com/embed/aHglT2SIkQE?si=H5qocKyA_JocBfAa" 
+                        title="Video Đồi Uyên Ương Đà Lạt" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <p class="has-text-centered has-text-grey is-italic mt-3">
+                    
+
+Đà Lạt mùa nào đẹp nhất để chụp ảnh cưới?
+                </p>
+            </div>
+        </div>
+
+
+
+
+        
+        <div class="columns is-centered mt-5">
+            <div class="column is-8">
+                <figure class="image is-16by9" style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <iframe class="has-ratio" 
+                        src="https://www.youtube.com/embed/h8ctV5A6HCc?si=wZ2fRdnXgVZ8K6sT" 
+                        title="Video Đồi Uyên Ương Đà Lạt" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <p class="has-text-centered has-text-grey is-italic mt-3">
+                    
+
+Vlog #75: Chụp Hình Cưới tại Đà Lạt Siêu Xịnnnn | TIEN LE
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // JS cho Menu trên điện thoại
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

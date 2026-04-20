@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Du lịch thành phố ngàn hoa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+
+        /* ================= CSS PINTEREST LAYOUT ================= */
+.pinterest-grid {
+    /* Mặc định trên điện thoại hiển thị 2 cột */
+    column-count: 2;
+    column-gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Tablet hiển thị 3 cột */
+@media (min-width: 768px) {
+    .pinterest-grid {
+        column-count: 3;
+    }
+}
+
+/* Desktop hiển thị 4 cột */
+@media (min-width: 1024px) {
+    .pinterest-grid {
+        column-count: 4;
+    }
+}
+
+.pinterest-item {
+    /* Thuộc tính quan trọng: Ngăn không cho ảnh bị cắt làm đôi giữa 2 cột */
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.pinterest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pinterest-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.pinterest-caption {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Chơi một mình</p>
+            <p class="subtitle">Nếu như bạn đang có dự định đi mình ên vi vu đến Đà Lạt thì đừng bỏ qua "top
+                của top đỉnh của chóp"</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="discovery.html"><i class="fas fa-coffee mr-2"></i>Khám phá</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+    <section class="section">
+
+        <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html" class="has-text-grey">
+                        <span class="icon is-small"><i class="fas fa-home"></i></span>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="discovery.html" class="has-text-grey">Khám phá</a>
+                </li>
+                <li class="is-active">
+                    <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">Chơi một mình</a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="title">Thanh tịnh</h1>
+        <h2 class="subtitle">
+            Điểm đến lý tưởng cho những ai muốn tìm về chốn bình yên, tận hưởng khí hậu se lạnh và khung cảnh nên thơ.
+        </h2>
+
+        <section class="section">
+            <div class="container">
+
+
+                <div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+
+                    <div class="column is-5">
+                        <figure class="image is-16by9">
+                            <img src="https://etrip4utravel.s3-ap-southeast-1.amazonaws.com/images/tinymce/2025/05/d97722e3-3089-4898-bf21-2d0b8895c961.jpeg"
+                                alt="Điểm đến lý tưởng cho những ai muốn tìm về chốn bình yên"
+                                style="border-radius: 8px; object-fit: cover;">
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <a href="postHenHo/13QuaBar.html" class="title is-4 has-text-primary"
+                            style="text-decoration: none;">
+
+                            Top 10 địa điểm du lịch Đà Lạt “cực tịnh” nhất định nên ghé nha
+                        </a>
+                    </div>
+
+                    <div class="column is-narrow has-text-right">
+                        <span class="icon is-large has-text-grey-light">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    <div class="column is-5">
+                        <figure class="image is-16by9">
+                            <img src="https://bazantravel.com/cdn/medias/uploads/22/22585-doi-mot-nguoi-bazan-travel-600x400.jpg"
+                                alt="Cafe view thung lũng Đà Lạt" style="border-radius: 8px; object-fit: cover;">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <a href="postHenHo/DoiTre2.html" class="title is-4 has-text-primary"
+                            style="text-decoration: none;">
+                            Cẩm nang du lịch Đà Lạt một mình - Ghi dấu ấn tuổi thanh xuân
+                        </a>
+                        <p class="mt-3 has-text-grey">Hiện nay du lịch một mình đang là xu hướng được nhiều người yêu
+                            thích và muốn thử. Hãy đánh dấu cuộc đời mình bằng một chuyến đi dành riêng cho bản thân với
+                            cẩm nang du lịch Đà Lạt một mình đầy thú vị ngay sau đây nhé!
+                            .</p>
+                    </div>
+                    <div class="column is-narrow has-text-right">
+                        <span class="icon is-large has-text-grey-light">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+
+
+
+                </div>
+
+                <div class="column is-8">
+                    <figure class="image is-16by9"
+                        style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                        <iframe class="has-ratio" src="https://www.youtube.com/embed/mH3znKjh3VM?si=uw13vphSF-2fpfsS"
+                            title="Video Đồi Uyên Ương Đà Lạt" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </figure>
+                    <p class="has-text-centered has-text-grey is-italic mt-3">
+
+
+                        Đà Lạt Vlog | Đi một mình cảm giác sẽ ra sao. </p>
+                </div>
+                <hr>
+
+
+
+
+
+
+                <h1 class="title mt-6">Sô lô cùng bô lê rô</h1>
+                <h2 class="subtitle">
+                    Các bản hit bất hủ từ chục năm trước. Cảm ơn Spotify đã đồng hành cũng chương trình.
+                </h2>
+
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/3Mj0vd5trSMH7hdH8NVIOO?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <p>Có lẽ là bài hát nổi tiếng nhất về Đà Lạt. Hình ảnh "thành phố nào nhớ không em, nơi chúng mình tìm
+                    phút êm đềm" đã in sâu vào tâm trí nhiều thế hệ.</p>
+                <hr>
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/1BH9EPe2V4fsqsAFgt8R3b?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <p>Một bản nhạc tươi sáng, vẽ nên bức tranh Đà Lạt mộng mơ với hoa đào rực rỡ và những bước chân êm đềm
+                    trên lối cũ.</p>
+                <hr>
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/0a2qLEn9jSbIClqyYIUftp?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <p>Bài hát diễn tả vẻ đẹp u buồn, tĩnh lặng của thành phố khi nắng chiều buông xuống bên Hồ Xuân Hương.
+                </p>
+                <hr>
+                <iframe data-testid="embed-iframe" style="border-radius:12px"
+                    src="https://open.spotify.com/embed/track/0uZYBBeODNrJgRoIvylRCZ?utm_source=generator" width="100%"
+                    height="352" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <p>Một lời tâm tình gửi đến Đà Lạt – nơi có "khói sương lam mờ" và những kỷ niệm khó quên.</p>
+                <hr>
+
+                <h1 class="title mt-6">Mệt lắm rồi nha</h1>
+<h2 class="subtitle">
+    Người lạ ơi ! Xin hãy cho tôi mượn bờ vai <br>
+Tựa đầu gục ngã vì mỏi mệt quá
+</h2>
+<div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+
+                    <div class="column is-5">
+                        <figure class="image is-16by9">
+                            <img src="images/baiDang/10-cach-hieu-qua-de-cam-thay-bot-co-don-va-hanh-phuc-hon-khi-mot-minh_1144690.jpg.crdownload"
+                                alt="Điểm đến lý tưởng cho những ai muốn tìm về chốn bình yên"
+                                style="border-radius: 8px; object-fit: cover;">
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <a href="postMotMinh/mot2.html" class="title is-4 has-text-primary"
+                            style="text-decoration: none;">
+
+                            Buồn thì buồn một chút thôi, mưa nào mà không tạnh, nắng nào mà không lên. Đà Lạt vẫn luôn đẹp, vẫn luôn chờ đón những bước chân cô đơn đến với mình. Hãy để những cơn gió se lạnh của thành phố ngàn hoa xoa dịu tâm hồn bạn, và biết đâu đấy, giữa những con đường rợp bóng thông xanh, bạn sẽ tìm thấy một niềm vui nhỏ nhoi nào đó để tiếp tục hành trình của mình.
+                        </a>
+                    </div>
+
+                    <div class="column is-narrow has-text-right">
+                        <span class="icon is-large has-text-grey-light">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+
+                </div>
+
+<h1 class="title mt-6">Tự sướng</h1>
+<h2 class="subtitle">
+    Thành phố ngàn hoa là thiên đường sống ảo với vô vàn góc chụp đẹp mê hồn. Dưới đây là một số địa điểm
+    nổi bật mà bạn không nên bỏ qua khi đến Đà Lạt một mình.
+</h2>
+
+<div class="pinterest-grid mt-4">
+    <div class="pinterest-item">
+        <img src="images/pinterest/coHong.jpg" alt="Dốc sương mù">
+        <div class="pinterest-caption">Concept hồng tựa chốn bồng lai</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/emBeOGa.jpg" alt="Góc phố Đà Lạt">
+        <div class="pinterest-caption">Nếu muốn có vibe ảnh Tết bình yên, cổ kính thì ga Đà Lạt là điểm đến thích hợp á nha bà.</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/anhTraiOCho.jpg" alt="Chợ Đà Lạt">
+        <div class="pinterest-caption">Giữa một vạn người</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/anhTraiODoi.jpg" alt="Đồi thông">
+        <div class="pinterest-caption">Săn mây Cầu Đất</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/chiOHo.jpg" alt="Hồ Xuân Hương">
+        <div class="pinterest-caption">Múa quạt ở Hồ</div>
+    </div>
+    
+    <div class="pinterest-item">
+        <img src="images/pinterest/docNhaBo.jpg" alt="dốc Nhà Bò">
+        <div class="pinterest-caption">Dốc Nhà Bò</div>
+    </div>
+
+
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/hoaMinh.jpg" alt="dốc Nhà Bò">
+        <div class="pinterest-caption">Hòa mình với thiên nhiên</div>
+    </div>
+    
+    <div class="pinterest-item">
+        <img src="images/pinterest/tocVang.jpg" alt="dốc Nhà Bò">
+        <div class="pinterest-caption">Ngồi trên đài phun nước cũng nghệ á</div>
+    </div>
+    
+    <div class="pinterest-item">
+        <img src="images/pinterest/doiChe.jpg" alt="dốc Nhà Bò">
+        <div class="pinterest-caption">Đồi Chè nè</div>
+    </div>
+
+    
+</div>
+        </section>
+
+
+        <script>
+            // JS cho Menu trên điện thoại
+            document.addEventListener('DOMContentLoaded', () => {
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+                if ($navbarBurgers.length > 0) {
+                    $navbarBurgers.forEach(el => {
+                        el.addEventListener('click', () => {
+                            const target = el.dataset.target;
+                            const $target = document.getElementById(target);
+                            el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+                        });
+                    });
+                }
+            });
+        </script>
+
+</body>
+
+</html>

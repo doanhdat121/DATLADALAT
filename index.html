@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ĐẠT LA ĐÀ LẠT - Du lịch thành phố ngàn hoa</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="icon" type="image/png" href="images/comon/favi.png">
+
+  <style>
+    body {
+      font-family: 'Jost', sans-serif;
+    }
+
+    /* Chỉnh màu chủ đạo */
+    :root {
+      --bulma-primary: #13357B;
+    }
+
+    .has-text-primary {
+      color: #13357B !important;
+    }
+
+    /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+    .hero-bg {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+      background-size: cover;
+    }
+
+    /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+    .tabs.is-boxed a {
+      color: #fff;
+      border-color: transparent;
+    }
+
+    .tabs.is-boxed a:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-bottom-color: transparent;
+    }
+
+    .tabs.is-boxed li.is-active a {
+      background-color: white;
+      color: #13357B;
+      font-weight: 600;
+    }
+
+    /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+    .fixed-bottom-menu {
+      position: fixed;
+      /* Lệnh "phép thuật" ghim phần tử lại */
+      bottom: 0;
+      /* Dính chặt xuống đáy màn hình */
+      left: 0;
+      right: 0;
+      background-color: #13357B;
+      /* Nền xanh chủ đạo của web */
+      z-index: 1000;
+      /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+      box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+      /* Đổ bóng nhẹ lên trên cho đẹp */
+    }
+
+    /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+    .fixed-bottom-menu .tabs ul {
+      border-bottom: none;
+    }
+
+    /* Tùy chỉnh các thẻ khi chưa bấm */
+    .fixed-bottom-menu .tabs.is-boxed a {
+      border: none !important;
+      border-radius: 0 !important;
+      color: rgba(255, 255, 255, 0.7);
+      /* Chữ màu trắng mờ */
+      padding: 15px 10px;
+    }
+
+    /* Hiệu ứng khi rê chuột qua */
+    .fixed-bottom-menu .tabs.is-boxed a:hover {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: white;
+    }
+
+    /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+    .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+      background-color: transparent !important;
+      color: white !important;
+      /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+      border-top: 3px solid #14B8A6 !important;
+      font-weight: 600;
+    }
+
+    /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+    body {
+      padding-bottom: 60px;
+    }
+    /* CSS cho Video Nền */
+.has-video-background {
+  position: relative;
+  overflow: hidden; /* Đảm bảo video không bị tràn ra ngoài khung */
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Chìa khóa vàng: Ép video lấp đầy khung hình mà không bị méo tỉ lệ */
+  z-index: 0; /* Cho video nằm dưới cùng */
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Lớp phủ đen mờ giúp chữ màu trắng nổi bật lên */
+  z-index: 1; /* Nằm trên video nhưng dưới chữ */
+}
+
+/* Đẩy nội dung chữ và thanh menu nổi lên trên cùng */
+.has-video-background .hero-head,
+.has-video-background .hero-body {
+  position: relative;
+  z-index: 2; 
+}
+/* Điều chỉnh vị trí của hero-body để đẩy nội dung lên sát mép trên */
+.hero-body {
+  align-items: flex-start !important; /* Đẩy nội dung lên đầu thay vì ở giữa */
+  padding-top: 20px !important;      /* Khoảng cách nhỏ với mép trên */
+}
+
+/* Tùy chỉnh kích thước Logo riêng của em */
+.custom-logo {
+  width: 180px !important; /* Tăng kích thước (trước đó là 128px) */
+  height: auto !important;
+ 
+  transition: transform 0.3s; /* Thêm hiệu ứng cho sinh động */
+}
+
+.custom-logo:hover {
+  transform: scale(1.05); /* Rê chuột vào logo sẽ to lên nhẹ */
+}
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Chìa khóa để video không bị méo tỉ lệ */
+  z-index: 0;
+}
+.has-video-background {
+  position: relative;
+  overflow: hidden;
+  /* THÊM 2 DÒNG NÀY: Dùng chính ảnh nendo làm nền mặc định cuối cùng */
+  background: url('images/comon/nendung.jpg') center center no-repeat;
+  background-size: cover;
+}
+  </style>
+</head>
+
+<body>
+
+  <section class="hero has-video-background is-fullheight">
+
+  <video class="hero-video" autoplay loop muted playsinline poster="images/comon/gioithieubg.webp">
+    <source src="videos/nendonghome.mp4" type="video/mp4">
+  </video>
+  
+  <div class="hero-overlay"></div>
+  
+  <div class="hero-head">
+    <header class="navbar pt-2">
+        </header>
+  </div>
+
+  <div class="hero-body">
+  <div class="container has-text-centered">
+    
+    <figure class="image is-inline-block mb-3">
+      <img class="is-rounded custom-logo" src="images/comon/DLDL.webp" alt="Logo Đạt La Đà Lạt">
+    </figure>
+
+    <h1 class="title is-1 has-text-white" style="font-size: 4rem; text-shadow: 2px 2px 10px rgba(0,0,0,0.5);">
+      Phường Phố Ngàn Hoa
+    </h1>
+    <h2 class="subtitle is-4 has-text-white mt-4" style="text-shadow: 1px 1px 5px rgba(0,0,0,0.5);">
+      Trang web  du lịch mới khai trương
+    </h2>
+    
+  </div>
+</div>
+
+</section>
+
+  <div class="container mt-5">
+    <div class="columns is-centered">
+      <div class="column is-6-desktop">
+        <!--Bài đăng nổi bật địa điểm-->
+
+        <section class="hero is-small is-primary">
+          <div class="hero-body">
+            <span class="tag is-rounded">Chủ đề</span>
+            <p class="title">Địa điểm nổi bật</p>
+            <p class="subtitle">Đà Lạt có gì chơi? Bỏ túi các địa điểm du lịch Đà Lạt nổi tiếng và điểm check-in mới ở
+              Đà
+              Lạt nhé. Nào mình cùng đi Đà Lạt tự túc thôi!</p>
+          </div>
+        </section>
+
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://res.klook.com/image/upload/q_85/c_fill,w_1360/v1734603999/tw61fbjfyqdhwu9wnjp0.webp"
+                alt="Placeholder image" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://avatars.githubusercontent.com/u/196046574?v=4" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Do Anh Dat La Da Lat</p>
+                <p class="subtitle is-6">@doanhdat</p>
+              </div>
+            </div>
+
+            <div class="content">
+              45 Địa Điểm Du Lịch Đà Lạt Nổi Tiếng Cho Hội Tự Túc
+              <a>@DoDat</a>. <a href="#">#DADLDL</a>
+              <a href="#">#dia_diem_noi_bat</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card" style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+
+          <div class="card-image has-background-black has-text-centered" style="padding: 15px 0;">
+            <iframe
+              src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F906064815276293%2F&show_text=false&width=267&t=0"
+              width="267" height="476" style="border:none; overflow:hidden; border-radius: 8px;" scrolling="no"
+              frameborder="0" allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+            </iframe>
+          </div>
+
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img class="is-rounded"
+                    src="images/comon/favi.png"
+                    alt="Avatar John Smith" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5 has-text-primary">Khôi Travel - Thuê Xe Du Lịch Đà Lạt
+                </p>
+                <p class="subtitle is-6 text-gray">@khoi</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Giới thiệu cho cả nhà điểm chụp hoa Mai Anh Đào cổ điển tại Đà Lạt 🌸🌸
+              <a href="#">#dalat</a>
+              <a href="#">#dia_diem_noi_bat</a>
+              <br />
+              <time datetime="2016-01-01" class="is-size-7 has-text-grey">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://ik.imagekit.io/tvlk/dam/i/01k3nj4dgyy90n1ywn7a9t1ry2.png?tr=q-70,c-at_max,w-1000,h-600"
+                alt="Placeholder image" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://avatars.githubusercontent.com/u/196046574?v=4" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Do Anh Dat La Da Lat</p>
+                <p class="subtitle is-6">@doanhdat</p>
+              </div>
+            </div>
+
+            <div class="content">
+              Kinh nghiệm du lịch Đà Lạt chi tiết A - Z mới nhất 2026
+              <a>@DoDat</a>. <a href="#">#vui_thay_ba</a>
+              <a href="#">#dia_diem_noi_bat</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <!--Bài đăng nổi bật cà phê-->
+        <section class="hero is-small is-primary">
+          <div class="hero-body">
+            <span class="tag is-rounded">Chủ đề</span>
+            <p class="title">Cà phê cà pháo</p>
+            <p class="subtitle">Cà phê liên hoàn cốc - sốc không kịp giảm. Nào mình cùng đi thôi!</p>
+          </div>
+        </section>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://mia.vn/media/uploads/blog-du-lich/phia-tay-co-mat-troi-1749203402.jpg"
+                alt="Placeholder image" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://avatars.githubusercontent.com/u/196046574?v=4" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Do Anh Dat La Da Lat</p>
+                <p class="subtitle is-6">@doanhdat</p>
+              </div>
+            </div>
+
+            <div class="content">
+              20 quán cafe Đà Lạt xinh đẹp, mộng mơ nhất 2026
+              <a>@DoDat</a>. <a href="#">#tinh_thay_ba</a>
+              <a href="#">#ca_phe_ca_phao</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+        <hr>
+
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://ezcloud.vn/wp-content/uploads/2024/08/khong-gian-jju-coffee.webp"
+                alt="Placeholder image" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://avatars.githubusercontent.com/u/196046574?v=4" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">Do Anh Dat La Da Lat</p>
+                <p class="subtitle is-6">@doanhdat</p>
+              </div>
+            </div>
+
+            <div class="content">
+              TOP 15 quán cafe Đà Lạt sở hữu view triệu đô 2026
+              <a>@DoDat</a>. <a href="#">#vui_thay_ba</a>
+              <a href="#">#dia_diem_noi_bat</a>
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="card h-100"
+          style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background-color: #000;">
+
+          <div class="card-image" style="display: flex; justify-content: center; align-items: center;">
+
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@lacaphee/video/7606900727604202759"
+              data-video-id="7606900727604202759" style="max-width: 605px; min-width: 325px; margin: 0; border: none;">
+              <section>
+                <a target="_blank" title="@lacaphee" href="https://www.tiktok.com/@lacaphee?refer=embed">@lacaphee</a>
+                Cà phê Đà Lạt làm toii được chiêm ngưỡng nhiều cảnh mà tưởng chỉ có trong truyện cổ tích 🍃🥹
+                <a title="dalat" target="_blank" href="https://www.tiktok.com/tag/dalat?refer=embed">#dalat</a>
+                <a title="lacaphee" target="_blank" href="https://www.tiktok.com/tag/lacaphee?refer=embed">#lacaphee</a>
+                <a target="_blank" title="♬ âm thanh gốc  - La cà phê ✨"
+                  href="https://www.tiktok.com/music/âm-thanh-gốc-La-cà-phê-✨-7606900767505140498?refer=embed">♬ âm
+                  thanh
+                  gốc - La cà phê ✨</a>
+              </section>
+            </blockquote>
+
+            <script async src="https://www.tiktok.com/embed.js"></script>
+
+          </div>
+
+          <div class="card-content has-background-white">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img class="is-rounded" src="https://bulma.io/assets/images/placeholders/96x96.png" alt="Avatar" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-5 has-text-primary">La Cà Phê</p>
+                <p class="subtitle is-6 text-gray">@lacaphee</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+
+
+
+
+
+
+        <!--Bài đăng nổi bật về đồi-->
+        <section class="hero is-small is-primary">
+          <div class="hero-body">
+            <span class="tag is-rounded">Chủ đề</span>
+            <p class="title">Đồi thông hai mộng</p>
+            <p class="subtitle">Một chiều rừng, gió lộng một chiều rừng kể chuyện bên đồi thông. Cùng khám phá nhé!</p>
+          </div>
+        </section>
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <img src="https://dalattrongtoi.com/media/upload/images/2(3).jpg" alt="Placeholder image" />
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-left">
+                <figure class="image is-48x48">
+                  <img src="https://dalattrongtoi.com/media/images/logo/logo1_thumb.jpg" alt="Placeholder image" />
+                </figure>
+              </div>
+              <div class="media-content">
+                <p class="title is-4">dalattrongtoi</p>
+                <p class="subtitle is-6">@dalattrongtoi</p>
+              </div>
+            </div>
+
+            <div class="content">
+              TOP NHỮNG NGỌN ĐỒI KHÔNG NÊN BỎ LỠ KHI ĐẾN VỚI ĐÀ LẠT
+              <a>@dalattrongtoi</a>. <a href="#">#doi_thong_hai_mong</a>
+
+              <br />
+              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer" style="background: linear-gradient(0deg, #618fdf, #0d1e57);">
+    <div class="content has-text-centered has-text-white">
+      <p>
+        Đề tài: Thiết kế Website Du lịch Đà Lạt
+      </p>
+      <p>
+        Thực hiện bởi: Đỗ Anh Đạt2410277THK48SP
+      </p>
+      <p class="is-size-7" style="color: #e2e8f0;">
+        @copyright 2026. Do Anh Đạt inc.
+
+      </p>
+    </div>
+  </footer>
+  <div class="fixed-bottom-menu">
+    <nav class="tabs is-boxed is-fullwidth m-0">
+      <div class="container is-max-widescreen">
+        <ul>
+          <li class="is-active"><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+          <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+          <li><a href="discovery.html"><i class="fa-solid fa-compass mr-2"></i>Khám phá</a></li>
+          <li><a href="tour.html"><i class="fa-solid fa-location-arrow mr-2"></i>Tour</a></li>
+          <li><a href="gioiThieu.html"><i class="fa-brands fa-dochub mr-2"></i>Giới thiệu</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <script>
+    // JS cho Menu trên điện thoại
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      if ($navbarBurgers.length > 0) {
+        $navbarBurgers.forEach(el => {
+          el.addEventListener('click', () => {
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+            el.classList.toggle('is-active');
+            $target.classList.toggle('is-active');
+          });
+        });
+      }
+    });
+  </script>
+
+</body>
+
+</html>

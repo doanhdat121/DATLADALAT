@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Du lịch thành phố ngàn hoa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+
+        .gia-moi {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #13357B;
+        }
+
+        .gia-goc {
+            text-decoration: line-through;
+            color: #888;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Cùng Đạt la tới Đà Lạt</p>
+            <p class="subtitle">Thượng lộ bình an</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li><a href="discovery.html"><i class="fa-solid fa-compass mr-2"></i>Khám phá</a></li>
+                    <li class="is-active"><a href="tour.html"><i class="fa-solid fa-location-arrow mr-2"></i>Tour</a>
+                    </li>
+                    <li><a href="gioiThieu.html"><i class="fa-brands fa-dochub mr-2"></i>Giới thiệu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+    <section class="section">
+        <div class="container">
+
+            <h2 class="title is-2 has-text-centered has-text-primary mb-6">Chuyến đi</h2>
+            <p class="subtitle is-5 has-text-centered mb-6">Những chuyến xe du lịch từ Tây Ninh đến Đà Lạt</p>
+            <table class="table is-fullwidth is-striped">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Nhà xe</th>
+                        <th>Từ - Đến</th>
+
+                        <th>Giờ đi</th>
+                        <th>Giá vé</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nhà xe Nam Phát</td>
+                        <td>Tây Ninh - Đà Lạt</td>
+                        <td>07:00</td>
+                        <td>300.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Nhà xe Nam Phát</td>
+                        <td>Tây Ninh - Đà Lạt</td>
+                        <td>18:30</td>
+                        <td>300.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Nhà xe Lê Hải</td>
+                        <td>Tây Ninh - Đà Lạt</td>
+                        <td>05:30</td>
+                        <td>350.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Nhà xe Lê Hải</td>
+                        <td>Tây Ninh - Đà Lạt</td>
+                        <td>19:00</td>
+                        <td>350.000 VND</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Nhà xe Lê Hải</td>
+                        <td>Tây Ninh - Đà Lạt</td>
+                        <td>16:30</td>
+                        <td>350.000 VND</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="subtitle is-5 has-text-centered mb-6">Những chuyến đi khác đang được cập nhật...</p>
+            <hr>
+            <h2 class="title is-2 has-text-centered has-text-primary mb-6">10 tiếng trên xe làm gì?</h2>
+            <p class="subtitle is-5 has-text-centered mb-6">Những gợi ý để tận hưởng hành trình đến Đà Lạt</p>
+            <div class="columns is-multiline">
+                <!-- Mỗi cột là một chủ đề khám phá, bạn có thể thêm nhiều cột hơn nữa -->
+                <div class="column is-4"><a href="chohenho.html">
+                        <div class="card h-100 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://github.com/user-attachments/assets/96520a58-f12b-425e-8c33-0d9fbd938e7d"
+                                        alt="Chỗ hẹn hò lãng mạn">
+                                </figure>
+                            </div>
+                            <div class="card-content has-background-info-light">
+                                <p class="title is-5 has-text-centered">Anh trai 'say xe'</p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column is-4">
+                    <a href="motMinh.html">
+                        <div class="card h-100 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://github.com/user-attachments/assets/056ac0fd-f824-44d0-8fa6-773514bd2c0e"
+                                        alt="Chơi một mình">
+                                </figure>
+                            </div>
+                            <div class="card-content has-background-info-light">
+                                <p class="title is-5 has-text-centered">Cách nằm đúng điệu</p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column is-4">
+                    <a href="comNuoc.html">
+                        <div class="card h-100 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+                                    <img src="https://github.com/user-attachments/assets/8ad753a4-855d-47f8-8d21-ca3b60272199"
+                                        alt="Cơm nước gì chưa người đẹp">
+                                </figure>
+                            </div>
+                            <div class="card-content has-background-info-light">
+                                <p class="title is-5 has-text-centered">Âm nhạc cực lắc</p>
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+            <hr>
+            <h2 class="title is-2 has-text-centered has-text-primary mb-6">Tour vạn người mê</h2>
+            <p class="subtitle is-5 has-text-centered mb-6">Những gợi ý để tận hưởng hành trình đến Đà Lạt</p>
+            <div class="columns is-multiline">
+                <!-- Mỗi cột là một chủ đề khám phá, bạn có thể thêm nhiều cột hơn nữa -->
+                <div class="column is-4"><a href="chohenho.html">
+                        <div class="card h-100 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+
+                                    <img src="images/baiDang/t1.jpg"
+                                        alt="Chỗ hẹn hò lãng mạn">
+                                </figure>
+                            </div>
+                            <div class="card-content has-background-info-light">
+
+                                <p class="title is-5 has-text-centered"><span class="tag is-rounded is-primary">1
+                                        ngày</span>Tour du lịch Chu Du Đà Lạt mới toanh siêu cool 2026</p>
+                                <div class="content has-text-centered">
+                                    <span class="gia-goc">745,000 VNĐ</span>
+                                    <span class="gia-moi">685,000 VNĐ</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column is-4"><a href="chohenho.html">
+                        <div class="card h-100 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+
+                                    <img src="images/baiDang/t2.jpg"
+                                        alt="Chỗ hẹn hò lãng mạn">
+                                </figure>
+                            </div>
+                            <div class="card-content has-background-info-light">
+
+                                <p class="title is-5 has-text-centered"><span class="tag is-rounded is-primary">1
+                                        ngày</span>Tour Langbiang Đà Lạt</p>
+                                <div class="content has-text-centered">
+                                    <span class="gia-goc">745,000 VNĐ</span>
+                                    <span class="gia-moi">649,000 VNĐ</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="column is-4"><a href="chohenho.html">
+                        <div class="card h-100 shadow-sm" style="border-radius: 15px; overflow: hidden;">
+                            <div class="card-image">
+                                <figure class="image is-4by3">
+
+                                    <img src="images/baiDang/t3.jpg"
+                                        alt="Chỗ hẹn hò lãng mạn">
+                                </figure>
+                            </div>
+                            <div class="card-content has-background-info-light">
+
+                                <p class="title is-5 has-text-centered"><span class="tag is-rounded is-primary">3
+                                        ngày</span>Tour Du Lịch 3 Ngày 3 Đêm Đà Lạt Trọn Gói</p>
+                                <div class="content has-text-centered">
+                                    <span class="gia-goc">4,950,000 VNĐ</span>
+                                    <span class="gia-moi">3,500,000 VNĐ</span>
+
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </section>
+
+    <script>
+        // JS cho Menu trên điện thoại
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

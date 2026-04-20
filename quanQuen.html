@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Quán quen</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+
+        /* ================= CSS PINTEREST LAYOUT ================= */
+.pinterest-grid {
+    /* Mặc định trên điện thoại hiển thị 2 cột */
+    column-count: 2;
+    column-gap: 1rem;
+    padding: 1rem 0;
+}
+
+/* Tablet hiển thị 3 cột */
+@media (min-width: 768px) {
+    .pinterest-grid {
+        column-count: 3;
+    }
+}
+
+/* Desktop hiển thị 4 cột */
+@media (min-width: 1024px) {
+    .pinterest-grid {
+        column-count: 4;
+    }
+}
+
+.pinterest-item {
+    /* Thuộc tính quan trọng: Ngăn không cho ảnh bị cắt làm đôi giữa 2 cột */
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+}
+
+.pinterest-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.pinterest-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.pinterest-caption {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Quán quen</p>
+            <p class="subtitle">Cảnh này thật quen thuộc, hình như ta đã thấy nó ở đâu rồi</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="discovery.html"><i class="fa-solid fa-store mr-2"></i>Quán quen</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+    <section class="section">
+
+        <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html" class="has-text-grey">
+                        <span class="icon is-small"><i class="fas fa-home"></i></span>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="discovery.html" class="has-text-grey">Khám phá</a>
+                </li>
+                <li class="is-active">
+                    <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">Quán quen</a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="title">Nó biết mình mình không biết nó</h1>
+        <h2 class="subtitle">
+            Hình như là... Ơn giời cậu đây rồi
+        </h2>
+
+        <section class="section">
+            <div class="container">
+
+
+                <div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+
+                    <div class="column is-5">
+                        <figure class="image is-16by9">
+                            <img src="images/baiDang/banh-canh-ty.png"
+                                alt="Điểm đến lý tưởng cho những ai muốn tìm về chốn bình yên"
+                                style="border-radius: 8px; object-fit: cover;">
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <a href="postQuanQuen/quen11.html" class="title is-4 has-text-primary"
+                            style="text-decoration: none;">
+
+                            Bánh canh TY - quán quen của sinh viên Đà Lạt, "ăn bột lọc hay bột gạo?"
+                        </a>
+                    </div>
+
+                    <div class="column is-narrow has-text-right">
+                        <span class="icon is-large has-text-grey-light">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    <div class="column is-5">
+                        <figure class="image is-16by9">
+                            <img src="images/baiDang/Hieu.webp"
+                                alt="Cafe view thung lũng Đà Lạt" style="border-radius: 8px; object-fit: cover;">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <a href="postQuanQuen/quen2.html" class="title is-4 has-text-primary"
+                            style="text-decoration: none;">
+Tạp hóa cô Hiếu, chợ Đà Lạt thứ 1 của sinh viên vì cô là HIEUTHUNHAT                     </a>
+                        
+                    </div>
+                    <div class="column is-narrow has-text-right">
+                        <span class="icon is-large has-text-grey-light">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+
+
+
+                </div>
+<div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+                    <div class="column is-5">
+                        <figure class="image is-16by9">
+                            <img src="images/baiDang/la-cai.jpg"
+                                alt="Cafe view thung lũng Đà Lạt" style="border-radius: 8px; object-fit: cover;">
+                        </figure>
+                    </div>
+                    <div class="column">
+                        <a href="postQuanQuen/quen1.html" class="title is-4 has-text-primary"
+                            style="text-decoration: none;">
+Tin lá cải                </a>        
+                    </div>
+                    <div class="column is-narrow has-text-right">
+                        <span class="icon is-large has-text-grey-light">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+
+
+
+                </div>
+               
+
+
+<h1 class="title mt-6">"Tôi đây không chờ bạn nữa giờ tôi ăn liền"</h1>
+<h2 class="subtitle">
+    
+</h2>
+
+<div class="pinterest-grid mt-4">
+    <div class="pinterest-item">
+        <img src="images/pinterest/oc.webp" alt="Dốc sương mù">
+        <div class="pinterest-caption">Ốc Bươu Nhồi Thịt Chấm Mắm Tỏi</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/tong-tai-pho-mai-nuong-da-lat-bi-cam-ban-hang-o-cho-dem-dan-mang-xon-xao-333-7546142.webp" alt="Góc phố Đà Lạt">
+        <div class="pinterest-caption">Muzan chợ đêm Đà Lạt</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/banhgido.jpg" alt="Chợ Đà Lạt">
+        <div class="pinterest-caption">Đồ ăn</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/xapxap.webp" alt="Đồi thông">
+        <div class="pinterest-caption">Xắp Xắp - Món Ăn Ngon Đà Lạt Không Nên Bỏ Lỡ</div>
+    </div>
+
+    <div class="pinterest-item">
+        <img src="images/pinterest/banhmi.jpg" alt="Hồ Xuân Hương">
+        <div class="pinterest-caption">Bánh mì xíu mại</div>
+    </div>
+    
+
+
+    
+</div>
+        </section>
+
+
+        <script>
+            // JS cho Menu trên điện thoại
+            document.addEventListener('DOMContentLoaded', () => {
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+                if ($navbarBurgers.length > 0) {
+                    $navbarBurgers.forEach(el => {
+                        el.addEventListener('click', () => {
+                            const target = el.dataset.target;
+                            const $target = document.getElementById(target);
+                            el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+                        });
+                    });
+                }
+            });
+        </script>
+
+</body>
+
+</html>

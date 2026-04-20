@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Teambuilding</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Teambuilding</p>
+            <p class="subtitle">Khám phá những địa điểm lý tưởng để tổ chức các hoạt động teambuilding tại Đà Lạt</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="discovery.html"><i class="fas fa-coffee mr-2"></i>Khám phá</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+    <section class="section">
+
+        <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html" class="has-text-grey">
+                        <span class="icon is-small"><i class="fas fa-home"></i></span>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="discovery.html" class="has-text-grey">Khám phá</a>
+                </li>
+                <li class="is-active">
+                    <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">Teambuilding</a>
+                </li>
+            </ul>
+        </nav>
+        <h1 class="title">Công ty muốn tổ chức Teambuilding à</h1>
+        <h2 class="subtitle">
+            Đà Lạt có rất nhiều địa điểm lý tưởng để tổ chức các hoạt động teambuilding, từ những khu vực ngoài trời
+            rộng lớn đến những không gian trong nhà ấm cúng. Dưới đây là một số gợi ý về địa điểm teambuilding tại Đà
+            Lạt mà bạn có thể tham khảo nè
+        </h2>
+
+        <section class="section">
+            <div class="container">
+
+
+                <div class="columns is-vcentered"
+                    style="border-bottom: 1px solid #eaeaea; padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
+
+                    <div class="column is-5">
+                        <figure class="image is-16by9">
+                            <img src="images/baiDang/team.jpeg" alt="Quán cafe hẹn hò"
+                                style="border-radius: 8px; object-fit: cover;">
+                        </figure>
+                    </div>
+
+                    <div class="column">
+                        <a href="postTeam/team1.html" class="title is-4 has-text-primary"
+                            style="text-decoration: none;">
+
+                            Tổng hợp 10 địa điểm tổ chức team building tại Đà Lạt hấp dẫn nhất 2025 </a>
+                        <p class="mt-3 has-text-grey">
+                            Đây là điểm đến lý tưởng cho những chuyến du lịch kết hợp team building, mang đến những trải
+                            nghiệm độc đáo và đầy ấn tượng. </p>
+                    </div>
+
+                    <div class="column is-narrow has-text-right">
+                        <span class="icon is-large has-text-grey-light">
+                            <i class="fas fa-chevron-right"></i>
+                        </span>
+                    </div>
+
+                </div>
+                
+
+
+
+
+
+
+        </section>
+        <h1 class="title mt-6">Chơi hội đồng</h1>
+        <h2 class="subtitle">
+            chơi hội đồng là một hình thức teambuilding rất phổ biến, nơi các thành viên trong nhóm cùng tác động nhau trong các trò chơi
+        </h2>
+
+        <div class="columns is-centered mt-5">
+            <div class="column is-8">
+                <figure class="image is-16by9"
+                    style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <iframe class="has-ratio" src="https://www.youtube.com/embed/7X7MCK-ch9A?si=fUQ3XxZ0d5d44E-G""
+                        title="Video Đồi Uyên Ương Đà Lạt" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <p class="has-text-centered has-text-grey is-italic mt-3">
+
+
+GOLA TRAVEL - TEAM BUILDING ĐÀ LẠT CÔNG TY TNHH ECV TECHNOLOGY                </p>
+            </div>
+        </div>
+
+
+
+
+        <div class="columns is-centered mt-5">
+            <div class="column is-8">
+                <figure class="image is-16by9"
+                    style="border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+                    <iframe class="has-ratio" src="https://www.youtube.com/embed/BCvvBZ-3YtA?si=89GHe8IE6hG_WTi8"
+                        title="Video Đồi Uyên Ương Đà Lạt" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen>
+                    </iframe>
+                </figure>
+                <p class="has-text-centered has-text-grey is-italic mt-3">
+
+
+REALPLUS - TEAM BUILDING ĐÀ LẠT - OUTRIDE ANYTHING                </p>
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+
+    <script>
+        // JS cho Menu trên điện thoại
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

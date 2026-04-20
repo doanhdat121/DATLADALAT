@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trịnh trọng giói thiệu</title>
+    <link rel="icon" type="image/png" href="images/comon/favi.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        strong {
+            color: #fff1c9;
+            /* Màu xanh ngọc nổi bật cho các đoạn chữ quan trọng */
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+
+        .pfooter {
+            color: #f2dada;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link" style="background: url(images/comon/gioithieubg.webp) center/cover;">
+        <div class="hero-body">
+            <p class="title">Trân trọng giới thiệu</p>
+            <p class="subtitle">Công ty trách nhiệm hữu hạn một thành viên ĐẠT LA ĐÀ LẠT</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li><a href="discovery.html"><i class="fa-solid fa-compass mr-2"></i>Khám phá</a></li>
+                    <li><a href="tour.html"><i class="fa-solid fa-location-arrow mr-2"></i>Tour</a></li>
+                    <li class="is-active"><a href="gioiThieu.html"><i class="fa-brands fa-dochub mr-2"></i>Giới
+                            thiệu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+
+    <section class="section has-background-white py-4; height: 40vh;">
+        <div class="container is-max-desktop">
+            <div class="columns is-mobile is-vcentered is-centered">
+                <div class="column is-4 has-text-centered">
+
+                    <img src="images/comon/dodat.webp" alt="Do Dat Logo" style="max-height: 120px;">
+
+                </div>
+                <div class="column is-4 has-text-centered">
+                    <a href="https://doanhdat121.github.io/" , target="_blank">
+                        <img src="images/comon/logo DAT tròn.webp" alt="A Logo" style="max-height: 200px;">
+                    </a>
+                </div>
+                <div class="column is-4 has-text-centered">
+                    <a href="https://sites.google.com/view/doanhdat/m%C3%A0n-h%C3%ACnh-ch%C3%ADnh" , target="_blank">
+                        <img src="images/comon/TNO.webp" alt="Dat Logo" style="max-height: 140px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: linear-gradient(135deg, #b933d9, #4a6ee0); min-height: 60vh;">
+        <div class="container is-max-desktop has-text-centered">
+
+            <figure class="image is-inline-block mb-6">
+                <a href="index.html">
+                    <img src="images/comon/DLDL.webp" alt="Đạt La Đà Lạt" style="max-width: 350px;">
+                </a>
+            </figure>
+            <hr>
+            <h2 class="title is-3 has-text-white">ĐẠT LA ĐÀ LẠT</h2>
+            <div class="content has-text-centered"
+                                style="color: #e5f5e8; line-height: 1.2; font-style: italic; font-size: 1.2em; margin-bottom: 2rem;">
+                                <p style="white-space: pre-wrap; margin: 0;">
+
+
+Đạt La Đà Lạt đó nha
+Web xinh trải lối, mượt mà sắc hương.
+Đa phương tiện, dẫn nẻo đường
+Ảnh hình sống động, phố phường mộng mơ.
+
+Tím trầm xen sắc vàng thơ
+Xanh rừng thông phủ, lững lờ khói vương.
+Nhấp chuột, trải nghiệm lạ thường
+Gói trọn tinh túy, tình thương xứ trà.
+
+Xong rồi, tạm biệt ngàn hoa
+Tay Ninh vẫy gọi, đường xa tôi về.
+
+
+                                </p>
+                            </div>
+            <div class="content has-text-white is-size-6-mobile is-size-5-tablet px-3" style="line-height: 1.8;">
+                <p>
+                    <strong>Chào mừng bạn đến với không gian nhỏ bé này,</strong> nơi những dòng chữ chân thật nhất được
+                    viết nên từ trái tim một người con <strong>Tây Ninh</strong> ở Đà Lạt.
+                </p>
+                <p>
+                    Website này ra đời thật đặc biệt, khởi đầu từ một đề tài cuối khóa của học phần Thiết kế Web. Nhưng
+                    vượt lên chính mình, một bài tập nhóm thì đây còn là góc nhỏ để mình sẻ chia, kể những câu chuyện
+                    dung dị và lưu giữ những hình ảnh thân thương về Đà Lạt – thành phố sương mù đã che chở và mang đến
+                    cho chúng mình những năm tháng đại học rực rỡ.<br><br>
+
+                    Mong rằng, qua những giao diện được chăm chút tỉ mỉ và từng trang viết này, bạn sẽ cảm nhận được
+                    tình yêu và sự gắn bó dành trọn cho quê hương thứ hai mang tên Đà Lạt. Xin gửi lời tri ân chân thành
+                    đến quý Thầy hướng dẫn đã truyền cảm hứng để chúng em hoàn thiện trang web ý nghĩa này! </p>
+
+                <p class="mt-5">
+                    <span class="has-text-link-dark px-3 py-1 is-italic has-text-weight-bold"
+                        style="background-color: rgba(255,255,255,0.8); text-decoration: underline;">
+                        <a href="index.html">Hãy cùng tôi khám phá và cảm nhận nhé!</a>
+                    </span>
+                </p>
+            </div>
+
+            <figure class="image is-inline-block ">
+                <img src="images/comon/doanhdat.webp" alt="Chữ ký Đỗ Anh Đạt" style="max-width: 100%; width: 350px;">
+            </figure>
+
+        </div>
+
+    </section>
+    <footer class="footer" style="background: linear-gradient(0deg, #618fdf, #0d1e57);">
+        <div class="content has-text-centered has-text-white">
+            <p>
+                <strong>Đề tài: Thiết kế Website Du lịch Đà Lạt</strong>
+            </p>
+            <p>
+                Thực hiện bởi: <strong>Đỗ Anh Đạt</strong> <strong>2410277</strong> <strong>THK48SP</strong>
+            </p>
+            <p class="is-size-7" style="color: #e2e8f0;">
+                @copyright 2026. Do Anh Đạt inc.
+            </p>
+        </div>
+    </footer>
+    <script>
+        // JS cho Menu trên điện thoại
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

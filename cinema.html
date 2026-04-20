@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xem Phim tại Đà Lạt</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+            background-color: #111729;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Xem Phim tại Đà Lạt</p>
+            <p class="subtitle">Khám phá rạp chiếu phim tuyệt vời tại thành phố ngàn hoa</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="discovery.html"><i class="fa-solid fa-film m-2"></i>Cinema</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+    <section class="section">
+
+        <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+            <ul>
+                <li>
+                    <a href="index.html" class="has-text-grey">
+                        <span class="icon is-small"><i class="fa-solid fa-home"></i></span>
+                        <span>Trang chủ</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="discovery.html" class="has-text-grey">Khám phá</a>
+                </li>
+                <li class="is-active">
+                    <a href="#" aria-current="page" class="has-text-white has-text-weight-bold">Cinema</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <section class="section" style=" min-height: 100vh;">
+            <div class="container">
+                <h2 class="title has-text-white has-text-centered mb-6">PHIM ĐANG CHIẾU TẠI ĐÀ LẠT</h2>
+<div class="has-text-centered mt-6">
+                <image src="images/baiDang/nsgd.webp" alt="Ảnh minh họa"
+                    style="width: 100%; max-width: 800px; border-radius: 8px; object-fit: cover;">
+            </div>
+                <div class="columns is-multiline">
+
+                    <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                        <div class="movie-item p-2">
+                            <figure class="image is-3by4 mb-4">
+                                <img src="images/baiDang/henem.webp" alt="Poster Phim 1"
+                                    style="border-radius: 8px; object-fit: cover;">
+                            </figure>
+
+                            <h3 class="title is-6 has-text-white has-text-centered is-uppercase"
+                                style="height: 2.5em; overflow: hidden;">
+                                HẸN EM NGÀY NHẬT THỰC (T16)
+                            </h3>
+
+                            <div class="is-flex is-justify-content-space-between is-align-items-center mt-4">
+                                <a href="#" class="has-text-grey-light is-size-7">
+                                    <span class="icon"><i class="far fa-play-circle"></i></span>
+                                    <span>Xem Trailer</span>
+                                </a>
+                                <button class="button is-warning has-text-weight-bold is-small">
+                                    ĐẶT VÉ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                        <div class="movie-item p-2">
+                            <figure class="image is-3by4 mb-4">
+                                <img src="images/baiDang/songhy.webp" alt="Poster Phim 2"
+                                    style="border-radius: 8px; object-fit: cover;">
+                            </figure>
+                            <h3 class="title is-6 has-text-white has-text-centered is-uppercase"
+                                style="height: 2.5em; overflow: hidden;">
+                                SONG HỶ LÂM NGUY (T13)
+                            </h3>
+                            <div class="is-flex is-justify-content-space-between is-align-items-center mt-4">
+                                <a href="#" class="has-text-grey-light is-size-7">
+                                    <span class="icon"><i class="far fa-play-circle"></i></span>
+                                    <span>Xem Trailer</span>
+                                </a>
+                                <button class="button is-warning has-text-weight-bold is-small">
+                                    ĐẶT VÉ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                        <div class="movie-item p-2">
+                            <figure class="image is-3by4 mb-4">
+                                <img src="images/baiDang/quynhap.webp" alt="Poster Phim 3"
+                                    style="border-radius: 8px; object-fit: cover;">
+                            </figure>
+                            <h3 class="title is-6 has-text-white has-text-centered is-uppercase"
+                                style="height: 2.5em; overflow: hidden;">
+                                QUỶ NHẬP TRÀNG 2 (T18)
+                            </h3>
+                            <div class="is-flex is-justify-content-space-between is-align-items-center mt-4">
+                                <a href="#" class="has-text-grey-light is-size-7">
+                                    <span class="icon"><i class="far fa-play-circle"></i></span>
+                                    <span>Xem Trailer</span>
+                                </a>
+                                <button class="button is-warning has-text-weight-bold is-small">
+                                    ĐẶT VÉ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-3-desktop is-6-tablet is-12-mobile">
+                        <div class="movie-item p-2">
+                            <figure class="image is-3by4 mb-4">
+                                <img src="images/baiDang/thooi.webp" alt="Poster Phim 4"
+                                    style="border-radius: 8px; object-fit: cover;">
+                            </figure>
+                            <h3 class="title is-6 has-text-white has-text-centered is-uppercase"
+                                style="height: 2.5em; overflow: hidden;">
+                                THỎ ƠI!! (T18)
+                            </h3>
+                            <div class="is-flex is-justify-content-space-between is-align-items-center mt-4">
+                                <a href="#" class="has-text-grey-light is-size-7">
+                                    <span class="icon"><i class="far fa-play-circle"></i></span>
+                                    <span>Xem Trailer</span>
+                                </a>
+                                <button class="button is-warning has-text-weight-bold is-small">
+                                    ĐẶT VÉ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+        </section>
+
+
+
+    </section>
+
+
+    <script>
+        // JS cho Menu trên điện thoại
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

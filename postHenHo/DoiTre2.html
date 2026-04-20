@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Du lịch thành phố ngàn hoa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Chỗ hẹn hò</p>
+            <p class="subtitle">Nếu như bạn đang có dự định cùng một nửa của mình vi vu đến Đà Lạt thì đừng bỏ qua "top
+                của top đỉnh của chóp"</p>
+        </div>
+    </section>
+
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="../discovery.html"><i class="fas fa-coffee mr-2"></i>Khám phá</a>
+                    </li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+
+
+
+
+    <section class="section pt-0">
+        <div class="container">
+            
+    <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+        <ul>
+            <li>
+                <a href="../index.html" class="has-text-grey">
+                    <span class="icon is-small"><i class="fas fa-home"></i></span>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li>
+                <a href="../discovery.html" class="has-text-grey">Khám phá</a>
+            </li>
+            <li>
+                <a href="../chohenho.html" class="has-text-grey">Chỗ hẹn hò</a>
+            </li>
+            <li class="is-active">
+                <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">"Hẹn hò" với người thương ở Đà Lạt trong dịp lễ Valentine</a> 
+            </li>
+        </ul>
+    </nav>
+            <div class="content has-text-centered">
+                <h1 class="has-text-primary">"Hẹn hò" với người thương ở Đà Lạt trong dịp lễ Valentine</h1>
+                <p class="is-size-5 has-text-grey">
+                    Không khí se lạnh và không gian lãng mạn của thành phố ngàn hoa luôn là chất xúc tác tuyệt vời cho
+                    tình yêu.
+                </p>
+                <hr>
+
+                <h2 class="has-text-info">1. Những điểm đến lãng mạn nên ghé thăm</h2>
+
+                <h3 class="has-text-primary mt-5">Thung lũng Tình yêu</h3>
+                <p>
+                    Chắc chắn không thể bỏ qua Thung lũng Tình Yêu – điểm đến biểu tượng với các công trình như cầu tình
+                    yêu, vườn hoa đặc sắc và hoạt động đạp vịt trên hồ. Đây là nơi thường xuyên tổ chức các hoạt động
+                    "vun đắp yêu thương" dành riêng cho dịp 14/2.
+                </p>
+                <figure>
+                    <img src="https://www.vietnamairlines.com/vn/vi/plan-book/travel/travel-guide/thung-lung-tinh-yeu/_jcr_content/root/maincontent/container/container_911134791/container_1490556511/container_2051784589/image-10-0.coreimg.85.1600.jpeg/1761027242390/thung-lung-tinh-yeu.jpeg"
+                        alt="Thung lũng tình yêu" style="border-radius: 10px; margin: 0 auto;">
+                </figure>
+
+                <h3 class="has-text-primary mt-5">Hồ Xuân Hương và Hồ Tuyền Lâm</h3>
+                <p>
+                    Không gian rộng lớn, phóng khoáng và thơ mộng nơi đây rất thích hợp cho cặp đôi thực hiện những
+                    chuyến đi dạo tay trong tay vào sáng sớm hoặc hoàng hôn để tận hưởng không gian yên bình.
+                </p>
+
+                <h3 class="has-text-primary mt-5">Đồi chè Cầu Đất & Các cung đường hoa</h3>
+                <p>
+                    Cách trung tâm thành phố không xa, đồi chè Cầu Đất mang đến không gian xanh mát và là bối cảnh chụp
+                    ảnh tuyệt đẹp cho các cặp đôi. Đặc biệt, Valentine 2026 rơi vào thời điểm Tết Nguyên Đán, trùng với
+                    mùa Lễ hội hoa Mai Anh Đào (khai mạc từ 16/01/2026), tạo nên khung cảnh lãng mạn với sắc hồng bao
+                    phủ khắp phố phường.
+                </p>
+                <figure>
+                    <img src="https://media.vietravel.com/images/Content/doi-che-cau-dat-o-da-lat-2.png"
+                        alt="Đồi chè Cầu Đất" style="border-radius: 10px; margin: 0 auto;">
+                </figure>
+
+                <hr>
+
+                <h2 class="has-text-info">2. Trải nghiệm ẩm thực và hẹn hò</h2>
+                <p>
+                    Chuyến du lịch dịp Valentine chắc chắn không thể thiếu được những trải nghiệm khám phá ẩm thực và
+                    đặc biệt là một buổi tối lãng mạn để ngày lễ tình yêu thêm trọn vẹn. Bạn có thể chọn đặt bàn ở một
+                    số nhà hàng tùy theo sở thích:
+                </p>
+                <ul style="list-style-position: inside; text-align: left; max-width: 800px; margin: 0 auto;">
+                    <li class="mb-2"><strong>Hilly Garden:</strong> Nhà hàng nhận đặt bàn cho dịp Valentine với tiệc BBQ
+                        nướng tại bàn hoặc món Âu trong không gian sân vườn lãng mạn.</li>
+                    <li class="mb-2"><strong>Nhà hàng STEAK NGON:</strong> Không gian bày trí tinh tế, nhạc nhẹ, phục vụ
+                        steak và rượu vang, rất phù hợp cho những buổi hẹn hò ấm cúng.</li>
+                    <li class="mb-2"><strong>Các quán cà phê decor:</strong> Đà Lạt có nhiều quán cà phê phong cách
+                        vintage hoặc view thung lũng được trang trí đặc biệt cho ngày lễ tình nhân.</li>
+                </ul>
+                <figure class="mt-4">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?q=80&w=1000&auto=format&fit=crop"
+                        alt="Bữa tối lãng mạn" style="border-radius: 10px; margin: 0 auto;">
+                </figure>
+
+                <hr>
+
+                <h2 class="has-text-info">3. Các hoạt động giải trí</h2>
+                <p>
+                    Nếu cặp đôi thuộc team năng động, trẻ trung, thích trải nghiệm và thử thách thì hãy thử sức một số
+                    hoạt động giải trí như:
+                </p>
+                <div class="columns is-multiline mt-3">
+                    <div class="column is-4">
+                        <div class="box has-background-info-light h-100">
+                            <strong><i class="fas fa-tram mr-2"></i>Cáp treo Đà Lạt</strong><br>
+                            Ngắm nhìn toàn cảnh thành phố sương mù từ trên cao.
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="box has-background-warning-light h-100">
+                            <strong><i class="fas fa-subway mr-2"></i>Alpine Coaster</strong><br>
+                            Trải nghiệm cảm giác mạnh cùng nhau tại thác Datanla.
+                        </div>
+                    </div>
+                    <div class="column is-4">
+                        <div class="box has-background-success-light h-100">
+                            <strong><i class="fas fa-guitar mr-2"></i>Show âm nhạc</strong><br>
+                            Thưởng thức các đêm nhạc acoustic "chill" giữa không gian mờ sương.
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+
+                <blockquote class="has-background-link-light" style="border-left-color: #13357B; text-align: left;">
+                    <strong>💡 Lời khuyên:</strong> Hi vọng rằng những gợi ý trên sẽ hữu ích cho các cặp đôi khi đang
+                    băn khoăn lựa chọn một điểm đến yêu thích trong dịp lễ tình nhân năm nay. Đừng ngần ngại liên hệ
+                    tổng đài <strong>1900 6091</strong> để được ABAY hỗ trợ đặt vé máy bay đi Đà Lạt nhanh chóng và hiệu
+                    quả bạn nhé.
+                </blockquote>
+            </div>
+
+            <div class="has-text-centered mt-5">
+                <a href="tel:19006091">
+                    <button class="button is-link is-rounded is-medium">
+                        <span class="icon"><i class="fas fa-phone-alt"></i></span>
+                        <span>Gọi ABAY Đặt Vé Ngay</span>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="discovery.html"><i class="fas fa-coffee mr-2"></i>Khám phá</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    </script>
+
+</body>
+
+
+
+
+<script>
+    // JS cho Menu trên điện thoại
+    document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        if ($navbarBurgers.length > 0) {
+            $navbarBurgers.forEach(el => {
+                el.addEventListener('click', () => {
+                    const target = el.dataset.target;
+                    const $target = document.getElementById(target);
+                    el.classList.toggle('is-active');
+                    $target.classList.toggle('is-active');
+                });
+            });
+        }
+    });
+</script>
+
+</body>
+
+</html>

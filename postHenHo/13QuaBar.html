@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Du lịch thành phố ngàn hoa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+        }
+
+        /* Chỉnh màu chủ đạo */
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+        .tabs.is-boxed a {
+            color: #fff;
+            border-color: transparent;
+        }
+
+        .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-bottom-color: transparent;
+        }
+
+        .tabs.is-boxed li.is-active a {
+            background-color: white;
+            color: #13357B;
+            font-weight: 600;
+        }
+
+        /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+        .fixed-bottom-menu {
+            position: fixed;
+            /* Lệnh "phép thuật" ghim phần tử lại */
+            bottom: 0;
+            /* Dính chặt xuống đáy màn hình */
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            /* Nền xanh chủ đạo của web */
+            z-index: 1000;
+            /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+            /* Đổ bóng nhẹ lên trên cho đẹp */
+        }
+
+        /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        /* Tùy chỉnh các thẻ khi chưa bấm */
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            /* Chữ màu trắng mờ */
+            padding: 15px 10px;
+        }
+
+        /* Hiệu ứng khi rê chuột qua */
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+
+        /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+        body {
+            padding-bottom: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nội dung chính của trang -->
+    <section class="hero is-medium is-link"
+        style="background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFlCZ5CIS4GjBR3XCa77pS20EYHSac_h-5vbQmRHsvZq5nC83c3KiA6gKmBrzE1l09t6HKsn4G4-0cWr8NxYqo0zy6EZY_8WXyZ-Q0Ee9Aaw-rjkCpAxo42Wn2g2Hjw8IhXBBAqTUTdKJw/w640-h360/Da+Lat4.jpg) center/cover;">
+        <div class="hero-body">
+            <p class="title">Chỗ hẹn hò</p>
+            <p class="subtitle">Nếu như bạn đang có dự định cùng một nửa của mình vi vu đến Đà Lạt thì đừng bỏ qua "top
+                của top đỉnh của chóp"</p>
+        </div>
+    </section>
+
+    <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+        <ul>
+            <li>
+                <a href="../index.html" class="has-text-grey">
+                    <span class="icon is-small"><i class="fas fa-home"></i></span>
+                    <span>Trang chủ</span>
+                </a>
+            </li>
+            <li>
+                <a href="../discovery.html" class="has-text-grey">Khám phá</a>
+            </li>
+            <li>
+                <a href="../chohenho.html" class="has-text-grey">Chỗ hẹn hò</a>
+            </li>
+            <li class="is-active">
+                <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">13 Quán Bar Ở Đà Lạt Cực Chill Được Giới Trẻ Yêu Thích</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="../discovery.html"><i class="fas fa-coffee mr-2"></i>Khám phá</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+    <!DOCTYPE html>
+    <html lang="vi">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ĐẠT LA ĐÀ LẠT - Du lịch thành phố ngàn hoa</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+        <style>
+            body {
+                font-family: 'Jost', sans-serif;
+            }
+
+            /* Chỉnh màu chủ đạo */
+            :root {
+                --bulma-primary: #13357B;
+            }
+
+            .has-text-primary {
+                color: #13357B !important;
+            }
+
+            /* Hiệu ứng làm mờ nền cho dễ đọc chữ */
+            .hero-bg {
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                    url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?q=80&w=2000&auto=format&fit=crop') center center;
+                background-size: cover;
+            }
+
+            /* Tùy chỉnh thanh Tabs cho đẹp hơn */
+            .tabs.is-boxed a {
+                color: #fff;
+                border-color: transparent;
+            }
+
+            .tabs.is-boxed a:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                border-bottom-color: transparent;
+            }
+
+            .tabs.is-boxed li.is-active a {
+                background-color: white;
+                color: #13357B;
+                font-weight: 600;
+            }
+
+            /* ================= CSS CHO MENU CỐ ĐỊNH ================= */
+            .fixed-bottom-menu {
+                position: fixed;
+                /* Lệnh "phép thuật" ghim phần tử lại */
+                bottom: 0;
+                /* Dính chặt xuống đáy màn hình */
+                left: 0;
+                right: 0;
+                background-color: #13357B;
+                /* Nền xanh chủ đạo của web */
+                z-index: 1000;
+                /* Đảm bảo menu luôn nổi lên trên mọi thứ khác */
+                box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+                /* Đổ bóng nhẹ lên trên cho đẹp */
+            }
+
+            /* Xóa cái gạch dưới mặc định của Bulma Tabs */
+            .fixed-bottom-menu .tabs ul {
+                border-bottom: none;
+            }
+
+            /* Tùy chỉnh các thẻ khi chưa bấm */
+            .fixed-bottom-menu .tabs.is-boxed a {
+                border: none !important;
+                border-radius: 0 !important;
+                color: rgba(255, 255, 255, 0.7);
+                /* Chữ màu trắng mờ */
+                padding: 15px 10px;
+            }
+
+            /* Hiệu ứng khi rê chuột qua */
+            .fixed-bottom-menu .tabs.is-boxed a:hover {
+                background-color: rgba(255, 255, 255, 0.1) !important;
+                color: white;
+            }
+
+            /* Tùy chỉnh thẻ ĐANG ĐƯỢC CHỌN (is-active) */
+            .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+                background-color: transparent !important;
+                color: white !important;
+                /* Tạo thanh ngang nổi bật màu xanh ngọc ở trên cùng thẻ đang chọn */
+                border-top: 3px solid #14B8A6 !important;
+                font-weight: 600;
+            }
+
+            /* QUAN TRỌNG: Đẩy nội dung toàn trang web lên một đoạn 
+   để chữ cuối trang không bị cái Menu này đè lên che mất */
+            body {
+                padding-bottom: 60px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Nội dung chính của trang -->
+
+
+
+        <!-- ================= NỘI DUNG CHÍNH CỦA TRANG  ================= -->
+
+
+
+        <section class="section">
+            <div class="container">
+
+                <div class="content has-text-centered">
+                    <h1 class="has-text-primary">Top Quán Bar Đà Lạt Cực Chill Cho Giới Trẻ</h1>
+                    <p>
+                        Đà Lạt không chỉ có những quán cafe mộng mơ mà còn sở hữu những quán bar cực chill dành cho giới
+                        trẻ yêu thích sự sôi động. Hãy cùng điểm qua những cái tên nổi bật nhất để "quẩy" hết mình khi
+                        màn đêm buông xuống nhé!
+                    </p>
+
+                    <hr>
+
+                    <h2>1. Rain Nightclub Bar</h2>
+                    <p>
+                        Đây là quán bar nổi tiếng với các hoạt động sôi nổi về đêm, sở hữu phong cách trẻ trung cùng đa
+                        dạng thể loại nhạc như EDM, Pop, Vinahouse. Nơi đây có hệ thống ánh sáng cực mạnh và diện tích
+                        sân khấu lớn, rất thích hợp để hội bạn thân cùng nhau xả stress "cực mạnh".
+                    </p>
+                    <figure>
+                        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1619506264/blog/fbw5jypimcajcggpfvn4.webp" alt="Rain Nightclub Bar"
+                            style="border-radius: 10px; margin: 0 auto;">
+                        <figcaption class="is-italic has-text-grey">Không gian sôi động tại Rain Nightclub Bar
+                        </figcaption>
+                    </figure>
+
+                    <h2>2. The Balcony Speakeasy Bar</h2>
+                    <p>
+                        The Balcony ẩn mình sau lớp vỏ bọc giản dị, mang phong cách speakeasy bar từng rất thịnh hành ở
+                        Mỹ vào những năm 1920. Quán nổi bật với không gian thoáng đãng và tầm nhìn tuyệt đẹp, giúp bạn
+                        ngắm trọn vẹn phố phường Đà Lạt lung linh từ trên cao.
+                    </p>
+                    <figure>
+                        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1722071207/xzdiglztsxuy7vwohsjt.webp"
+                            alt="The Balcony Speakeasy Bar" style="border-radius: 10px; margin: 0 auto;">
+                        <figcaption class="is-italic has-text-grey">Góc nhìn cực chill từ The Balcony</figcaption>
+                    </figure>
+
+                    <h2>3. 4:20 Sunset</h2>
+                    <p>
+                        Được thiết kế theo lối kiến trúc hiện đại và mang đậm phong cách cá tính, "swagger". Âm nhạc tại
+                        đây chủ yếu là Hip Hop, EDM và các list nhạc Âu Mỹ thịnh hành với sự góp mặt của DJ chơi nhạc
+                        trực tiếp.
+                    </p>
+                    <figure>
+                        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1765158202/hxewd0fuudox24paimvz.webp" alt="The Fog Bar"
+                            style="border-radius: 10px; margin: 0 auto;">
+                        <figcaption class="is-italic has-text-grey">Quán Bar Bao Trọn View Hoàng Hôn Đà Lạt
+                        </figcaption>
+                    </figure>
+
+                    <h2>4. B21 Beer</h2>
+                    <p>
+                        Nơi cuồng nhiệt của âm nhạc và bia tươi, thu hút thực khách bởi không khí sôi động và các loại
+                        cocktail vô cùng đa dạng. Một địa điểm cực kỳ lý tưởng để "hết mình" với những cuộc vui không
+                        ngủ tại thành phố sương mù.
+                    </p>
+                    <figure>
+                        <img src="https://res.klook.com/image/upload/fl_lossy.progressive,q_85/c_fill,w_1000/v1619506335/blog/izfyiwdajaqh2mwmrlm5.webp" alt="B21 Beer"
+                            style="border-radius: 10px; margin: 0 auto;">
+                        <figcaption class="is-italic has-text-grey">B21 Beer với không gian siêu náo nhiệt</figcaption>
+                    </figure>
+
+                    <br>
+
+                    <blockquote class="has-background-info-light" style="border-left-color: #13357B; text-align: left;">
+                        <strong>💡 Lời khuyên từ chuyên gia:</strong> Các quán bar ở Đà Lạt thường rất đông vào dịp cuối
+                        tuần. Các bạn nên gọi điện đặt bàn trước để có được vị trí đứng gần sân khấu hoặc vị trí view
+                        đẹp nhất nhé!
+                    </blockquote>
+                </div>
+
+                <a href="https://www.klook.com/vi/blog/quan-bar-da-lat/" target="_blank">
+                    <button class="button is-link is-rounded ">Chi tiết</button>
+                </a>
+        </section>
+
+
+
+
+        <script>
+            // JS cho Menu trên điện thoại
+            document.addEventListener('DOMContentLoaded', () => {
+                const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+                if ($navbarBurgers.length > 0) {
+                    $navbarBurgers.forEach(el => {
+                        el.addEventListener('click', () => {
+                            const target = el.dataset.target;
+                            const $target = document.getElementById(target);
+                            el.classList.toggle('is-active');
+                            $target.classList.toggle('is-active');
+                        });
+                    });
+                }
+            });
+        </script>
+
+    </body>
+
+    </html>
+
+
+    <script>
+        // JS cho Menu trên điện thoại
+        document.addEventListener('DOMContentLoaded', () => {
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+            if ($navbarBurgers.length > 0) {
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+                    });
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>

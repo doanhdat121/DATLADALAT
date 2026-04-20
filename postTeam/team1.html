@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĐẠT LA ĐÀ LẠT - Địa Điểm Tổ Chức Team Building</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <style>
+        body {
+            font-family: 'Jost', sans-serif;
+            padding-bottom: 60px; /* Chừa chỗ cho menu bottom */
+            background-color: #f9fafa; 
+        }
+
+        :root {
+            --bulma-primary: #13357B;
+        }
+
+        .has-text-primary {
+            color: #13357B !important;
+        }
+
+        /* Ảnh nền mang tính chất tập thể, núi rừng */
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+                url('https://images.unsplash.com/photo-1523580494112-071d384e236c?q=80&w=2000&auto=format&fit=crop') center center;
+            background-size: cover;
+        }
+
+        /* Class dùng chung cho ảnh đại diện của các thẻ */
+        .cover-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .fixed-bottom-menu {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #13357B;
+            z-index: 1000;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .fixed-bottom-menu .tabs ul {
+            border-bottom: none;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed a {
+            border: none !important;
+            border-radius: 0 !important;
+            color: rgba(255, 255, 255, 0.7);
+            padding: 15px 10px;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed a:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+            color: white;
+        }
+
+        .fixed-bottom-menu .tabs.is-boxed li.is-active a {
+            background-color: transparent !important;
+            color: white !important;
+            border-top: 3px solid #14B8A6 !important;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="hero is-medium hero-bg">
+        <div class="hero-body has-text-centered">
+            <p class="title has-text-white is-size-2">Đà Lạt Team Building</p>
+            <p class="subtitle has-text-light mt-3">Hành trình gắn kết đội ngũ giữa thiên nhiên thơ mộng bậc nhất Việt Nam</p>
+        </div>
+    </section>
+
+    <section class="section pt-5">
+        <div class="container is-max-widescreen">
+            
+            <nav class="breadcrumb has-arrow-separator is-small mb-5" aria-label="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="../index.html" class="has-text-grey">
+                            <span class="icon is-small"><i class="fas fa-home"></i></span>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../discovery.html" class="has-text-grey">Khám phá</a>
+                    </li>
+                    <li class="is-active">
+                        <a href="#" aria-current="page" class="has-text-primary has-text-weight-bold">Team Building</a> 
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="content has-text-centered mb-6">
+                <h1 class="has-text-primary">Vì sao Đà Lạt được nhiều công ty lựa chọn tổ chức Team Building?</h1>
+                <p class="is-size-5 has-text-grey">
+                    Đà Lạt không chỉ thu hút khách du lịch cá nhân mà còn là điểm đến lý tưởng cho các doanh nghiệp tổ chức hoạt động gắn kết nhờ 6 lý do tuyệt vời sau:
+                </p>
+            </div>
+
+            <div class="columns is-multiline mb-6">
+                <div class="column is-4">
+                    <div class="box h-100 has-text-centered">
+                        <i class="fas fa-cloud-sun fa-3x has-text-info mb-3"></i>
+                        <h4 class="has-text-primary">Khí hậu dễ chịu</h4>
+                        <p class="is-size-6">Nhiệt độ trung bình 15-25°C mang đến không khí mát mẻ, không gây mất sức, cực kỳ thích hợp cho các hoạt động vận động ngoài trời.</p>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box h-100 has-text-centered">
+                        <i class="fas fa-mountain fa-3x has-text-success mb-3"></i>
+                        <h4 class="has-text-primary">Khung cảnh tuyệt đẹp</h4>
+                        <p class="is-size-6">Sở hữu đồi núi trập trùng, rừng thông xanh mát và hồ nước trong vắt, tạo nên không gian lý tưởng cho các trò chơi lớn.</p>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box h-100 has-text-centered">
+                        <i class="fas fa-hotel fa-3x has-text-warning mb-3"></i>
+                        <h4 class="has-text-primary">Cơ sở vật chất tiện nghi</h4>
+                        <p class="is-size-6">Hệ thống resort, khách sạn, homestay đa dạng từ bình dân đến cao cấp, đáp ứng mọi quy mô tổ chức sự kiện và lưu trú.</p>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box h-100 has-text-centered">
+                        <i class="fas fa-users fa-3x has-text-danger mb-3"></i>
+                        <h4 class="has-text-primary">Đa dạng hoạt động</h4>
+                        <p class="is-size-6">Leo núi, cắm trại, chèo thuyền SUP/Kayak, hay trải nghiệm giao lưu cồng chiêng cùng người đồng bào dân tộc thiểu số.</p>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box h-100 has-text-centered">
+                        <i class="fas fa-shield-alt fa-3x has-text-link mb-3"></i>
+                        <h4 class="has-text-primary">An toàn và yên bình</h4>
+                        <p class="is-size-6">Không gian tách biệt, yên tĩnh và an toàn giúp các thành viên gạt bỏ công việc để có những giây phút gắn kết thực sự.</p>
+                    </div>
+                </div>
+                <div class="column is-4">
+                    <div class="box h-100 has-text-centered">
+                        <i class="fas fa-utensils fa-3x has-text-primary mb-3"></i>
+                        <h4 class="has-text-primary">Ẩm thực phong phú</h4>
+                        <p class="is-size-6">Từ các món nướng BBQ đậm đà hương vị núi rừng đến những tiệc Gala Dinner hoành tráng đều rất đáng trải nghiệm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="content has-text-centered mb-5 mt-6">
+                <h2 class="has-text-info">Top 8 Địa Điểm Tổ Chức Team Building Lý Tưởng Nhất</h2>
+            </div>
+
+            <div class="columns is-multiline">
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">1. Hồ Tuyền Lâm</h3>
+                        <img src="https://static-image.adavigo.com/uploads/images/2025/4/8/556efd5b-3b70-48de-8eb6-47fa043bba20.jpeg" alt="Hồ Tuyền Lâm" class="cover-img">
+                        <p class="is-size-6">Không gian thoáng mát, phong cảnh lãng mạn. Cực kỳ thích hợp để chèo thuyền kayak/SUP, dựng trại ven hồ, đốt lửa trại và chơi trò chơi nhóm buổi tối.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">2. Thung lũng Vàng</h3>
+                        <img src="https://static-image.adavigo.com/uploads/images/2025/4/8/6a6ff82c-b1ac-44b3-a044-d883c6cc9e13.jpeg" alt="Thung Lũng Vàng" class="cover-img">
+                        <p class="is-size-6">Cách trung tâm 15km, sở hữu thảm thực vật phong phú ven hồ Đankia. Không gian rộng lớn phù hợp cho hoạt động đi bộ đường dài và thử thách đội nhóm.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">3. Làng Cù Lần</h3>
+                        <img src="https://static-image.adavigo.com/uploads/images/2025/4/8/805a16d0-e84d-4e13-b7a1-da776f2deb12.jpeg" alt="Làng Cù Lần" class="cover-img">
+                        <p class="is-size-6">Nằm dưới chân núi Langbiang với địa hình bãi cỏ mênh mông. Nổi bật với chương trình lửa trại, lái xe jeep vượt suối và giao lưu văn hóa cồng chiêng người K’ho.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">4. The Florest</h3>
+                        <img src="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?q=80&w=1000&auto=format&fit=crop" alt="The Florest" class="cover-img">
+                        <p class="is-size-6">Sở hữu cánh đồng hoa khổng lồ 60ha tĩnh lặng. Cung cấp dịch vụ trọn gói từ yoga nhóm, picnic sáng tạo đến leo núi, chèo kayak, BBQ và Gala dinner.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">5. Khu du lịch Madagui</h3>
+                        <img src="https://static-image.adavigo.com/uploads/images/2025/4/8/ae81e104-e0c1-498f-99e0-4335fbcccf6c.jpeg" alt="Madagui" class="cover-img">
+                        <p class="is-size-6">Một phần của Vườn quốc gia Cát Tiên. Địa hình hang động, sông suối lý tưởng để chơi trò sinh tồn, đu dây zipline. Có sẵn nhà hàng khách sạn đầy đủ dịch vụ.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">6. Đỉnh Langbiang</h3>
+                        <img src="https://static-image.adavigo.com/uploads/images/2025/4/8/d73da067-eafa-4205-9d74-d7eb8526518f.jpeg" alt="Langbiang" class="cover-img">
+                        <p class="is-size-6">Dành cho những đội nhóm thích thử thách leo núi. Thưởng thức đêm Gala đậm chất Tây Nguyên với rượu cần. Phù hợp cho nhóm có sẵn ngân sách tốt (vé vào cổng khá cao).</p>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">7. Hồ Than Thở</h3>
+                        <img src="https://static-image.adavigo.com/uploads/images/2025/4/8/14b96d9b-2278-44d8-bd57-d97dacbc1745.jpeg" alt="Hồ Than Thở" class="cover-img">
+                        <p class="is-size-6">Khung cảnh hữu tình, rất thích hợp để chơi giải mật thư, thử thách trí tuệ, đạp xe ngắm cảnh, chèo thuyền hoặc cưỡi ngựa vòng quanh rừng thông.</p>
+                    </div>
+                </div>
+
+                <div class="column is-4-desktop is-6-tablet">
+                    <div class="box h-100">
+                        <h3 class="has-text-info is-size-5 mb-2 has-text-weight-bold">8. Đồi Đa Phú</h3>
+                        <img src="https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?q=80&w=1000&auto=format&fit=crop" alt="Đồi Đa Phú" class="cover-img">
+                        <p class="is-size-6">Tọa độ săn mây và cắm trại qua đêm siêu hot. Sẽ hơi vất vả khi vác đồ lên đỉnh núi nhưng bù lại là không gian tổ chức tiệc BBQ ngoài trời không thể tuyệt vời hơn.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="columns mt-5">
+                <div class="column is-7">
+                    <div class="content">
+                        <h3 class="has-text-info"><i class="fas fa-lightbulb has-text-warning mr-2"></i>Kinh nghiệm tổ chức suôn sẻ</h3>
+                        <ul>
+                            <li><strong>Khảo sát kỹ địa điểm:</strong> Hãy kiểm tra trước các dịch vụ ăn uống, khu vệ sinh, giá vé vào cổng và địa hình set up sân khấu để tránh phát sinh ngoài ý muốn.</li>
+                            <li><strong>Thời điểm vàng:</strong> Đà Lạt đẹp quanh năm, nhưng mùa khô từ <strong>tháng 11 đến tháng 4</strong> là thời điểm lý tưởng nhất để chơi ngoài trời không lo dính mưa rào.</li>
+                            <li><strong>Trang phục chuyên dụng:</strong> Nên nhắc nhở thành viên mang theo áo khoác nhẹ, giày thể thao bám đất tốt.</li>
+                            <li><strong>Lồng ghép văn hoá:</strong> Các hoạt động giao lưu với người dân bản địa (K'ho) sẽ làm chuyến đi ý nghĩa và đáng nhớ hơn.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="column is-5">
+                    <div class="box has-background-link-light h-100 is-flex is-flex-direction-column is-justify-content-center">
+                        <h4 class="has-text-primary has-text-centered mb-3">Đơn Vị Tổ Chức Đề Xuất</h4>
+                        <p class="is-size-6 has-text-centered mb-4">
+                            Nếu doanh nghiệp của bạn đang tìm kiếm một đơn vị tổ chức trọn gói, sáng tạo với chi phí tối ưu, hãy tham khảo <strong>Adavigo</strong> - Đối tác với 7 năm kinh nghiệm chuyên thiết kế concept sự kiện, team building riêng biệt.
+                        </p>
+                        <div class="has-text-centered">
+                            <a href="#">
+                                <button class="button is-link is-rounded">Liên Hệ Tư Vấn Ngay</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="fixed-bottom-menu">
+        <nav class="tabs is-boxed is-fullwidth m-0">
+            <div class="container is-max-widescreen">
+                <ul>
+                    <li><a href="../index.html"><i class="fas fa-star mr-2"></i>Nổi bật</a></li>
+                    <li><a href="thuoc-phim.html"><i class="fas fa-camera mr-2"></i>Thước phim</a></li>
+                    <li class="is-active"><a href="../discovery.html"><i class="fas fa-compass mr-2"></i>team building</a></li>
+                    <li><a><i class="fas fa-campground mr-2"></i>Chỗ ở</a></li>
+                    <li><a><i class="fas fa-motorcycle mr-2"></i>Vi vu</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+</body>
+</html>
